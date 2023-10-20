@@ -24,7 +24,8 @@ class ChatBOT:
     @calculate_execution_time
     def setup_openai(self):
         # You can use local model here, for instance, llama2
-        self.llm = ChatOpenAI()
+        # self.llm = ChatOpenAI(temperature=0.3)
+        self.llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature=0.3, max_tokens=-1) #不要用chat快多了。
 
 
     # TODO prompt跟model要再試，現在這個prompt用text-davinci-003還不錯但就貴貴而且再兩個月停止服務
@@ -54,13 +55,13 @@ class ChatBOT:
         question_explanation_stripped = question_explanation.strip()
         return question_explanation_stripped
 
-    def setup_memory(self):
-        self.memory = ConversationBufferWindowMemory(
-            input_key="question",
-            return_messages=True,
-            memory_key="chat_history",
-            k=3
-        )
+    # def setup_memory(self):
+    #     self.memory = ConversationBufferWindowMemory(
+    #         input_key="question",
+    #         return_messages=True,
+    #         memory_key="chat_history",
+    #         k=3
+    #     )
 
     # def setup_chat_history_from_memory(self):
     #     memory_variables = self.memory.load_memory_variables({})
