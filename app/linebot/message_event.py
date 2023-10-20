@@ -231,7 +231,7 @@ def handle_message(event):
             # 如果是正式機，就用openAI回答
             else:
                 # Call the ChatBOT module to get a response
-                response = ChatBOT().retrieval_answer(user_message)
+                response = ChatBOT().retrieval_answer(user_message, "namespace", "manual")
                 '''
                 # Call the ChatBOT module to get a response with metadata filter
                 # metadata filter usage example:

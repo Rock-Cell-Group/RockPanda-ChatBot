@@ -26,7 +26,7 @@ class KnowledegeEmbedding:
     def pdf_preprocessing(self, Directory: str):
         loader = DirectoryLoader(path=Directory, glob='**/*.pdf', show_progress=True, use_multithreading=True)
         docs = loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
         docs_split = text_splitter.split_documents(docs)
 
         return docs_split
@@ -34,7 +34,7 @@ class KnowledegeEmbedding:
     def txt_preprocessing(self, Directory: str):
         loader = DirectoryLoader(path=Directory, glob='**/*.txt', show_progress=True, use_multithreading=True)
         docs = loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
         docs_split = text_splitter.split_documents(docs)
 
         return docs_split
