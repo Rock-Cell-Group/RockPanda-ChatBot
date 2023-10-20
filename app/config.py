@@ -22,6 +22,8 @@ class BaseConfig(object):
     CHANNEL_SECRET = environ.get("CHANNEL_SECRET")
     # openai
     OPENAI_API_KEY = environ.get("OPENAI_API_KEY")
+    # redis
+    REDIS_URL = environ.get("REDIS_URL")
 
 
 class PrdConfig(object):
@@ -36,6 +38,8 @@ class PrdConfig(object):
     CHANNEL_SECRET = environ.get("CHANNEL_SECRET")
     # openai
     OPENAI_API_KEY = environ.get("OPENAI_API_KEY")
+    # redis
+    REDIS_URL = environ.get("REDIS_URL")
 
 
 def get_config_by_flask_env():

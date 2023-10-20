@@ -9,34 +9,24 @@ from app.services import user as user_service
 import app.services.system_file as file_service
 import app.services.post as post_service
 from app.model import models
-
+from app.services import redis
 # lineBot文件處理器
 
-user_state = {}
 
 @handler.add(MessageEvent, message=FileMessageContent)
 def handle_file_message(event):
     logger.info("Got FileMessageContent event message id: " + str(event.message.id))
     print(f"{event}")
-
+    user_state = redis.get_user_state(event.source.user_id)
     is_update_succesful = False
     document_metadata = user_state.get(event.source.user_id)
     if document_metadata:
-        subject = document_metadata['subject']
-        professor = document_metadata['professor']
-        exam_type = document_metadata['exam_type']
-        
-        conditions = [
-            ("question_course", subject),
-            ("question_professor", professor),
-            ("question_exam_type", exam_type),
-        ]
-        exist_data = file_service.get_column_value_set_by_conditions(models.FileSystem, conditions) 
-        exist_data = exist_data if exist_data is not [] else None
-        if exist_data:
-            is_update_succesful = file_service.update_file_by_metadata(event, conditions)
-            # 若用戶已上傳題目投稿，清除meta data狀態
+        # 如果有投稿資訊
+        is_update_succesful = file_service.update_file_by_metadata(event)
+        if is_update_succesful:
+            # 若用戶成功上傳題目投稿，清除meta data狀態
             user_state[event.source.user_id] = None
+            redis.save_user_state(event.source.user_id, user_state)
 
     # TODO 有時間可以做大型檔案檢查，因為line好像沒擋大檔案
     # is_system_file_saved = file_service.is_file_saved(event)  # 我只需要message_id "476366252647121285"
@@ -54,7 +44,6 @@ def handle_file_message(event):
         )
 
 
-
 # lineBot訊息處理器
 @handler.add(MessageEvent, message=TextMessageContent)
 def handle_message(event):
@@ -66,7 +55,7 @@ def handle_message(event):
     user = user_service.is_user_registered(event.source.user_id)
     if user is None:
         user = user_service.create_user(event.source.user_id)
-    
+
     # 開始處理訊息內容
     with ApiClient(configuration) as api_client:
         line_bot_api = MessagingApi(api_client)
@@ -92,7 +81,7 @@ def handle_message(event):
 
         # "/"傳文件資訊行為
         if cmd == "/Document_information":
-            
+
             print(f"來自{event.source.user_id}的文件資訊，已儲存至文件id：...")
             user_message = user_message.replace("/Document_information", "").strip()
             document_metadata = {}
@@ -105,11 +94,13 @@ def handle_message(event):
             course = document_metadata.get("課程")
             teacher = document_metadata.get("授課老師")
             exam_type = document_metadata.get("類型")
-            
-            if len(document_metadata) > 0 :
-                # 將科目、教授、類別資訊暫存，等待文件上傳
+
+            if len(document_metadata) > 0:
+                user_state = redis.get_user_state(event.source.user_id)
+                # 將科目、教授、類別資訊暫存至全域變數或redis，等待文件上傳
                 user_state[event.source.user_id] = {'subject': course, 'professor': teacher, 'exam_type': exam_type}
-                saved_metadata = file_service.save_metadata_to_db(event)
+                redis.save_user_state(event.source.user_id, user_state)
+                # saved_metadata = file_service.save_metadata_to_db(event) //TODO 如果metadata都先存到全域變數或redis，那這裡就沒必要先存到db
                 # 請求使用者上傳文件
                 line_bot_api.reply_message_with_http_info(
                     ReplyMessageRequest(
@@ -125,7 +116,7 @@ def handle_message(event):
                         messages=[TextMessage(text="格式不正確，請再試一次！")]
                     )
                 )
-        
+
         # "/投稿"行為
         elif cmd == "/投稿":
             # TODO 檢查投稿格式

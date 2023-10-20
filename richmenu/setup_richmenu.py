@@ -77,7 +77,7 @@ def rich_menu_object_json():
                     "type": "postback",
                     "data": "action=fetchQuestion",
                     "inputOption": "closeRichMenu",
-                    "displayText": "查詢考古題"
+                    "displayText": "查詢題目"
                 }
             },
             {
@@ -104,7 +104,7 @@ def rich_menu_object_json():
                     "type": "postback",
                     "data": "action=contributeDocDB",
                     "inputOption": "closeRichMenu",
-                    "displayText": "貢獻考古題"
+                    "displayText": "貢獻題目"
                 }
             }
 

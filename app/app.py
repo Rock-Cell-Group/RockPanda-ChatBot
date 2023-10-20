@@ -37,6 +37,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+user_status = {}
+
 
 @app.get('/demo-job')
 def job1():
@@ -62,7 +64,7 @@ async def startup_event():
         SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
         db = SessionLocal()
 
-        # 塞入初始資料(考古題們)
+        # 塞入初始資料(題目們)
         # Explicitly declare the SQL query as a text object
         query = text("SELECT count(*) FROM `RAG_FILE_SYSTEM`")
         db_file_number = db.execute(query).scalar()

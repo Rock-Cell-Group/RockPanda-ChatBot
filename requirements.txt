@@ -84,3 +84,5 @@ Werkzeug==3.0.0
 win32-setctime==1.1.0
 wrapt==1.15.0
 yarl==1.9.2
+
+redis==5.0.1

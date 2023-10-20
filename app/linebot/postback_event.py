@@ -93,7 +93,7 @@ def get_line_bot_api():
 def handle_fetch_question_postback(event, line_bot_api):
     """
     # 'action=fetchQuestion'
-    # A功能：查詢考古題 -> 選項式
+    # A功能：查詢題目-> 選項式
     """
     # 這一步驟每次執行都會從db撈最新的科目按鈕。好像也只能這樣
     # 以下是action=fetchQuestion觸發的
@@ -117,7 +117,7 @@ def handle_fetch_question_postback(event, line_bot_api):
 def handle_select_course_postback(event, data, line_bot_api):
     """
     # 'action=select_course'
-    # A功能：查詢考古題 -> 選項式 -> 選擇科目
+    # A功能：查詢題目 -> 選項式 -> 選擇科目
     """
     selected_course_value = data.split("@")[1]
     condition = [("question_course", selected_course_value)]
@@ -135,7 +135,7 @@ def handle_select_course_postback(event, data, line_bot_api):
 def handle_select_professor_postback(event, data, line_bot_api):
     """
     # 'action=select_question_professor'
-    # A功能：查詢考古題 -> 選項式 -> 選擇科目 -> 選擇教授
+    # A功能：查詢題目 -> 選項式 -> 選擇科目 -> 選擇教授
     """
     previous_selected_course = user_service.get_user_column_value(event.source.user_id, "last_postback_course_reply")
     selected_professor_value = data.split("@")[1]
@@ -155,7 +155,7 @@ def handle_select_professor_postback(event, data, line_bot_api):
 def handle_select_exam_type_postback(event, data, line_bot_api):
     """
     # 'action=select_question_exam_type'
-    # A功能：查詢考古題 -> 選項式 -> 選擇科目 -> 選擇教授 -> 選擇考試類型
+    # A功能：查詢題目 -> 選項式 -> 選擇科目 -> 選擇教授 -> 選擇考試類型
     """
     previous_selected_course = user_service.get_user_column_value(event.source.user_id, "last_postback_course_reply")
     previous_selected_professor = user_service.get_user_column_value(event.source.user_id, "last_postback_professor_reply")
@@ -169,7 +169,7 @@ def handle_select_exam_type_postback(event, data, line_bot_api):
                 reply_token=event.reply_token,
                 messages=[
                     FlexMessage(
-                        alt_text=f"考古題查詢結果",
+                        alt_text=f"題目查詢結果",
                         contents=FlexCarousel(
                             contents=flex_carousels().wrapping_bubbles_in_carousel_content_list(questionIDs)
                         )
@@ -192,7 +192,7 @@ def handle_select_exam_type_postback(event, data, line_bot_api):
                                               selected_exam_type_value)
     
 
-# 從考古生成新題目
+# 從舊題目生成新題目
 def handle_generate_similar_question_postback(event, data, line_bot_api):
     question_id = data.split("@")[1]
     original_question = questions_service.get_column_value_by_question_id(question_id, "raw_text")
@@ -213,7 +213,7 @@ def handle_generate_similar_question_postback(event, data, line_bot_api):
     user_service.commit_user_new_column_value(event.source.user_id, "last_generated_question", new_question)
 
 
-# 回答考古的題目
+# 回答舊題目
 def handle_answer_to_db_question_postback(event, data, line_bot_api):
     question_id = data.split("@")[1]
     original_question = questions_service.get_column_value_by_question_id(question_id, "raw_text")
@@ -311,7 +311,7 @@ def handle_check_upload_status_postback(event, line_bot_api):
     try:
         if len(uploaded_files) > 0:
             for i, file_status in enumerate(uploaded_files):
-                status_msg += f"\n{i+1}. 文件: {file_status.file_name}\n    審核狀態: {'已審核通過' if file_status.censor_status else '尚未審核' }，已上傳至資料庫。\n"
+                status_msg += f"\n{i+1}. 文件: {file_status.file_name}\n    審核狀態: {'已審核通過' if file_status.censor_status else '尚未審核' }。\n"
         else:
             status_msg += "您尚未上傳過文件。\n"
             

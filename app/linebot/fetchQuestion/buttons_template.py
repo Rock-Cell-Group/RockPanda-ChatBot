@@ -4,7 +4,7 @@ class JSON_formated_content:
         "altText": "This is a buttons template",
         "template": {
             "type": "buttons",
-            "text": "請選擇要進入哪一種模式\n  ◎選項式:會透過選項調用資料庫中的特定考古題目\n  ◎指令式:會由大語言模型判斷你需要哪些考古題目",
+            "text": "請選擇要進入哪一種模式\n  ◎選項式:會透過選項調用資料庫中的特定題目\n  ◎指令式:會由大語言模型判斷你需要哪些題目",
             "actions": [
             {
                 "type": "postback",

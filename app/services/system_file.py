@@ -1,9 +1,10 @@
 from contextlib import contextmanager
 from typing import Union, List, Tuple
-from sqlalchemy import not_, or_
+from sqlalchemy import not_, or_, desc, text
 from app.model import models
 from app.model.database import SessionLocal
 import uuid
+from app.services import redis
 
 
 # Function to get the database session
@@ -15,7 +16,12 @@ def get_db():
     finally:
         db.close()
 
+
+@DeprecationWarning
 def save_metadata_to_db(event):
+    """
+    沒必要，metadata在未上傳檔案前不用進資料庫
+    """
     user_message = event.message.text.replace("/Document_information", "").strip()
     document_metadata = {}
     lines = user_message.split("\n")
@@ -34,17 +40,28 @@ def save_metadata_to_db(event):
         question_exam_type = Column(String(255), default="")  # 考試類型 期中考
         """
 
-        new_file = models.FileSystem(
-            user_id=event.source.user_id,
-            question_course=course,
-            question_professor=teacher,
-            question_exam_type=exam_type
-        )
+        file_system_instance = get_latest_metadata_instance_by_user_id(event)
 
-        db.add(new_file)
-        db.commit()
-        db.refresh(new_file)
-        return new_file
+        if file_system_instance:
+            file_system_instance.question_course = course
+            file_system_instance.question_professor = teacher
+            file_system_instance.question_exam_type = exam_type
+            db.commit()
+            db.refresh(file_system_instance)
+            return file_system_instance
+        else:
+            new_file = models.FileSystem(
+                user_id=event.source.user_id,
+                question_course=course,
+                question_professor=teacher,
+                question_exam_type=exam_type
+            )
+            db.add(new_file)
+            db.commit()
+            db.refresh(new_file)
+            return new_file
+
+
 """
 Event: type='message' 
 source=UserSource(type='user', user_id='U94617f94e42a2d172f600b0e02f2204c') 
@@ -112,19 +129,20 @@ def get_column_value_set_by_conditions(model_class, conditions, column_name_to_q
             # 添加多個 filter 條件
             for column_name, column_value in conditions:
                 query = query.filter(getattr(model_class, column_name) == column_value)
-               
+
             # 去除重複值
             result = query.distinct().all()
 
             # 提取結果
             if column_name_to_query:
                 result = [row[0] for row in result]
-            
+
             return result
         except Exception as e:
             # 處理錯誤
             print(f"get_column_value_set_by_conditions() 發生錯誤：{e}")
             return []
+
 
 ''''
 # 使用示例
@@ -136,35 +154,39 @@ result = get_column_value_set_by_conditions(models.FileSystem, conditions, "ques
 '''
 
 
-def update_file_by_metadata(event, conditions):
-    
+def update_file_by_metadata(event):
     dialogue = get_column_value_set_by_conditions(models.Dialogue, [("message_id", event.message.id)])[0]
-    model_class = models.FileSystem
     try:
-        with get_db() as db:    
-            query = db.query(model_class)
+        with get_db() as db:
+            user_state = redis.get_user_state(event.source.user_id)
+            document_metadata = user_state.get(event.source.user_id)
+            if document_metadata:
+                # 確實有投稿資訊
+                file_path = file_fetcher(dialogue)
+                file_system_instance = models.FileSystem(
+                    user_id=event.source.user_id,
+                    question_course=document_metadata['subject'],
+                    question_professor=document_metadata['professor'],
+                    question_exam_type=document_metadata['exam_type'],
+                    file_path=file_path,
+                    file_name=event.message.file_name,
+                    file_extension=dialogue.message_file_extension,
+                    file_size=event.message.file_size,
+                    censor_status=0
+                )
+                db.add(file_system_instance)
+                db.commit()
+                db.refresh(file_system_instance)
+                return file_system_instance
+            else:
+                # 未填寫過投稿資訊
+                return None
 
-            # add filter conditions
-            for column_name, column_value in conditions:
-                query = query.filter(getattr(model_class, column_name) == column_value)
-            
-            selected_row = query.distinct().all()[0]            
-            file_path = file_fetcher(dialogue)
-
-            selected_row.file_path = file_path
-            selected_row.file_name = event.message.file_name
-            selected_row.file_extension = dialogue.message_file_extension
-            selected_row.file_size = event.message.file_size
-            selected_row.censor_status = 0
-            db.commit()
-
-            return selected_row
-            
     except Exception as e:
         # 處理錯誤
         print(f"update_file_by_metadata() 發生錯誤：{e}")
         return None
-            
+
     """
     type='message'
     source=UserSource(type='user', user_id='U94617f94e42a2d172f600b0e02f2204c') 
@@ -213,7 +235,7 @@ def file_fetcher(dialogue):
 
     return None
 
-        
+
 """
 type='message'
 source=UserSource(type='user', user_id='U94617f94e42a2d172f600b0e02f2204c')
@@ -227,7 +249,7 @@ message=FileMessageContent(type='file', id='477343761400594851', file_name='NTHU
 ***** document_metadata = {'subject': '微積分', 'professor': '王小明', 'exam_type': '期中考'}
 """
 
-        
+
 def get_column_value_set(model_class, column_name: str):
     with get_db() as db:
         try:
@@ -244,7 +266,6 @@ def get_column_value_set(model_class, column_name: str):
             #     not_(getattr(model_class, column_name).in_([None, ""]))
             # ).distinct().all()
 
-
             # 提取結果
             column_values = [row[0] for row in result]
 
@@ -253,11 +274,26 @@ def get_column_value_set(model_class, column_name: str):
             # 處理錯誤
             print(f"發生錯誤：{e}")
             return []
-        
+
+
 # 根據特定file id回傳某個欄位的值
 def get_column_value_by_file_id(file_id: str, column_name: str):
     with get_db() as db:
-        query_result =  db.query(getattr(models.FileSystem, column_name)).filter_by(id=file_id).first()
+        query_result = db.query(getattr(models.FileSystem, column_name)).filter_by(id=file_id).first()
         result, = query_result
         return result
-    
+
+
+@DeprecationWarning
+def get_latest_metadata_instance_by_user_id(event):
+    """
+    當前無用，因為metadata在未上傳檔案前不會進資料庫
+    """
+    with get_db() as db:
+        # 檢查改user於資料庫中最新一筆file_system的資料，是否file_name為空，
+        # 如果是，則更新該筆file_system的question_course, question_professor, question_exam_type為最新
+        file_system_instance = db.query(models.FileSystem).filter(
+            (models.FileSystem.user_id == event.source.user_id) &
+            (models.FileSystem.file_name == "")
+        ).order_by(desc(models.FileSystem.id)).first()
+        return file_system_instance
