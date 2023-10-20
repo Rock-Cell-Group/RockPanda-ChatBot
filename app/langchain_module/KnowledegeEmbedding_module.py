@@ -3,7 +3,7 @@ import pinecone
 from typing import Optional, List, Union, Dict
 from uuid import uuid4
 from dotenv import load_dotenv
-from langchain.document_loaders import DirectoryLoader
+from langchain.document_loaders import DirectoryLoader, Docx2txtLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Pinecone
@@ -23,10 +23,19 @@ class KnowledegeEmbedding:
         self.pineconeInstance = pinecone.Index(self.index_name)  # 建立pinecone client instance，可直接對pinecone操作
         print("pineconeInstance information", self.pineconeInstance.describe_index_stats())
 
+    def docx_preprocessing(self):
+        loader = Docx2txtLoader('UserManual/UserManual.docx')
+        docs = loader.load()
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
+        docs_split = text_splitter.split_documents(docs)
+
+        return docs_split
+    
+    
     def pdf_preprocessing(self, Directory: str):
         loader = DirectoryLoader(path=Directory, glob='**/*.pdf', show_progress=True, use_multithreading=True)
         docs = loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
         docs_split = text_splitter.split_documents(docs)
 
         return docs_split
@@ -34,7 +43,7 @@ class KnowledegeEmbedding:
     def txt_preprocessing(self, Directory: str):
         loader = DirectoryLoader(path=Directory, glob='**/*.txt', show_progress=True, use_multithreading=True)
         docs = loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
         docs_split = text_splitter.split_documents(docs)
 
         return docs_split
