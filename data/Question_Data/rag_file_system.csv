@@ -1,0 +1,3 @@
+id,user_id,file_name,file_path,file_size,file_extension,file_status,create_at,note,uuid_name,azure_container_name,azure_blob_name,file_purpose,is_file_useful,manager_id,manager_comment,censor_status,ocr_status,ocr_text,knowledge_department,knowledge_professor,knowledge_course,knowledge_year,question_department,question_professor,question_course,question_year,question_semester,question_exam_type,question_exam_question_type
+1,NULL,PreMS_midterm.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,琅元,前近代科學史,2015,上學期,期中考,1
+2,NULL,PreMS_final.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,琅元,前近代科學史,2015,上學期,期末考,1

@@ -1,0 +1,6 @@
+# .env
+*/__pycache__/
+__pycache__/
+app.log
+serverLog.txt
+.env

@@ -1,0 +1,138 @@
+id,file_id,number_in_file,type,raw_text,reference_answer
+1,1,1,1,"An old Egyptian papyrus was found. In modern notation it looked as below. Some lines were marked with a special symbol by the Egyptian scribes (replaced below with the symbol ""<=""):
+37 1
+74 2 <=
+148 4 <=
+296 8 <=
+Choose correct statement(s):
+A. This can be a record of multiplication of some number by 8;
+B. This can be a record of multiplication of some number by 14;
+C. This can be a record of multiplication of some number by 37;
+D. This can be a record of division of some number by 8;
+E. This can be a record of division of some number by 37;
+F. This can be a record of division of 518 by some number;
+G. This can be a record of division of 296 by some number;
+H. None of the above.",BCEF
+2,1,2,1,"The famous ""2/n table"" from Rhind papyrus..
+A. contained the line ""3 1/2 1/6"";
+B. contained the line ""22 1/22 1/33 1/66"";
+C. contained the line ""13 1/6 1/66"";
+D. contained the line ""105 1/53 1/5565"";
+E. None of the above.
+[Note: to enswer parts B-D you don't need to look for the table online or in powerpont files;
+you only need to know the purpose and structure of this table.]",AC
+3,1,3,1,"Choose correct statement(s):
+A. To write down the number 11 10 01, Babylonians used a special sign to mark the empty position:
+B. To write down the number 22 20 20, Babylonians used a special sign to mark the empty positions
+C. To write down the number 33 00 33, Babylonians used a special sign to mark the empty position;
+D. To write down the number 44 44 00, Babylonians used a special sign to mark the empty position;
+E. None of the above.",AC
+4,1,4,1,"Let N. Y, and Z be three ""magnitudes"" (that is, lengths of segments, areas or volumes of geometrical figures, or just numbers). Use the definition of ""commensurable magnitudes"" and the example discussed in class to choose correct statement(s):
+A. Suppose that X is commensurable with Y, and Y is commensurable with Z. Then in some cases X can be incommensurable with Z..
+B. Suppose that X is incommensurable with Y, and Y is incommensurable with Z. Then in some cases X can be commensurable with Z.
+C. Suppose that X is commensurable with Y, and Y is incommensurable with Z. Then in some cases X can be commensurable with Z. 
+D. For any two numbers X and Y there is always a number Z. commensurable with cach of them.
+E. None of the above.",B
+5,1,5,1,"Using only a compass and a straightedge, it is always possible to divide any given angle (smaller than 90 degrees) into
+A. 3 equal parts:
+B. 4 equal parts;
+C. 6 equal parts;
+D. None of the above.",B
+6,1,6,1,"Here is the definition that we discussed in class: ""A syllogism is called valid if and only if it has the following property: every time when the premisses of the syllogism are true, the conclusion of the syllogism must be also true"".
+Use this definition to mark only valid syllogisms. When answering this question, don't pay attention to the letters Q, R, S, T, they will be used in Question 7.
+A. [Q] All professors are old. All old people sleep a lot. Therefore, some professors sleep a lot.
+B. [R] All cats are afraid of dogs. Some students are afraid of dogs. Therefore, some students are cats.
+c. [S] All cows play badminton. Some badminton players can run very fast. Therefore, some cows can run very fast.
+D. [T] All students hate exams. Some students are vegetarians. Therefore, some vegetarians hate exams.
+E. None of the above.",AD
+7,1,7,1,"Choose the correct statement(s) about the syllogisms A, B, C, D from question 6:
+A. [Q] All professors are old. All old people sleep a lot. Therefore, some professors sleep a lot. is a syllogism in the 1st Figure;
+B. [R] All cats are afraid of dogs. Some students are afraid of dogs. Therefore, some students are cats. is a syllogism in the 2nd Figure;
+C. [S] All cows play badminton. Some badminton players can run very fast. Therefore, some cows can run very fast. is a syllogism in the 3rd Figure;
+D. [T] All students hate exams. Some students are vegetarians. Therefore, some vegetarians hate exams. is a syllogism in the 4th Figure;
+E. None of the above.
+[Hint: In some of the syllogisms P, Q, R, S the premises are not listed in the correct order. What is the correct order of premises in a syllogism? We discussed it in class.]",AB
+8,1,8,1,"Which statement(s) below are correct?
+A. Somebody marks a point on paper with a pencil. If the pencil is very sharp, it is a ""point"", according to a definition of Euclid;
+B. According to a definition of Euclid, a ""line"" does not contain any ""points"";
+C. According to a definition of Euclid, every ""line"" contains two ""points"";
+D. According to a definition of Euclid, every ""line"" is a collection of an infinite number of ""points"";
+E. None of the above",C
+9,1,9,1,"Which statements) below are correct?
+A. According to the logic of Stoics, today the statement ""today is Tuesday or today is April 21, 2015"" is true (here ""or"" is exclusive);
+B. According to the logic of Stoics, the statement ""if 2．2=4 then 3．3=9"" is true;
+C. According to the logic of Stoics, the statement ""1f 2．2=4 then 3．3=10"" is true;
+D. According to the logic of Stoics, the statement ""if 2．2=5 then 3．3=10"" is true;
+E. According to the logic of Stoics, the statement ""if 2．2=5 then 3．3=9"" is true;
+F. None of the above.",BDE
+10,1,10,1,"Consider the premises:
+Premise 1: ""if a student studies hard and his/her professor is nice, then the student does not fail the exam"";
+Premise 2: ""the student failed the exam""
+Premise 3: ""the student studied hard"";
+And consider the following conclusion: ""the professor is not nice""
+Which statement(s) below are correct?
+A. These three premises and conclusion together form an argument in Stoic logic;
+B. These three premises and conclusion together form a correct argument in Stoic logic;
+C. These three premises and conclusion together form an indemonstrable argument in Stoic logic;
+D. These three premises and conclusion together form a thema;
+E. None of the above.",AB
+11,2,1,1,"Choose correct statement(s):
+	A. According to Anaximander of Miletos, the Sun is located in the center of the Universe;
+	B. According to Aristotle, the Earth is located exactly in the center of the orbit of the Sun;
+	C. According to Aristarchus of Samos, the Sun is located in the center of the Universe;
+	D. According to Ptolemy, the Earth is located exactly in the center of the orbit of the Sun;
+	E. None of the above.",BC
+12,2,2,1,"Choose correct statement(s):
+	A. Early Church priests, such as Isidore of Seville and Venerable Bede, were against science and never studied any scientific disciplines;
+	B. Islamic astronomers did not make any modifications of the system of Ptolemy.;
+	C. The Seven Liberal Arts studied in medieval European universities were subdivided into two groups. The first group was called Quadrivium and included Grammar, Dialectic, and Rhetoric; the second group was called Trivium, and included Geometry, Arithmetic, Astronomy and Harmonics;
+	D. Oxford university Was opened earlier than all other European Universities;
+	E. None of the above.",E
+13,2,3,1,"Choose correct statement(s):
+	A. A large number of old scientific books were translated from Latin language into Greek language in the 12th and 13th centuries;
+	B. A large number of old Greek scientific books were translated from Arabic into Latin in the 12th and 13th centuries;
+	C. Some number of ancient scientific books were translated directly from Greek into Latin in the 12th th and 13th centuries;
+	D. The language used for teaching in medieval universities of Western Europe was Greek;
+	E. None of the above.",BC
+14,2,4,1,"Choose correct statement(s):
+	A. According to T. Brahe, the Earth is located in the center of the Universe;
+	B. According to T. Brahe, Mars rotates around the Sun;
+	C. A system of the world similar to the system of T. Brahe was created long time before him;
+	D. For his observations T. Brahe used the telescope constructed by Galileo;
+	E. None of the above.",ABC
+15,2,5,1,"Choose correct statement(s):
+	A. The smaller number that cannot be represented with 13 counting rods is 499;
+	B. The oldest Chinese mathematical books, such as the Jiuzhang suanshu九章算數(Computational methods of nine categories, also known as Nine Chapters of Mathematical Procedure, etc.), contained axioms, theorems, and common notions;
+	C. The abacus(suan pan 算盤) was used in China long before the counting rods;
+	D. There is a way to solve the first problem of the Mathematical Treatise of Sea Island海島算經 without using the concept of similar triangles;
+	E. None of the above.",D
+16,2,6,1,"If a Chinese mathematician of the 14th century had only 5 red and 10 black counting rods,he still would be able to represent the polynomial..
+	A. 7x+2y-5z-9u;
+	B. x+2(y^2)+3(z^3)
+	C. 5(x^55) - 55;
+	D. x+6y-7z-9u+t;
+	E. 2(y^2)-101(x^3)-83(x^2)y +12(x^2)(y^3)-(x^3)(y^2)
+	F. None of the above.",ACE
+17,2,7,1,"Choose correct statement(s):
+	A. The Chinese observed starry sky and gave names to some stars and constellations as early as the 24th century BC;
+	B. the position of ""North celestial pole"" (the conter of the apparent rotation of celestial sphere) among the stars is now the same as during the lifetime of the mathematician Qin Jiushao 秦九韶;
+	C. According to the invesigation of Sun Xiaochun and Kistemaker, the star catalogue called now ""the catalogue of Shi Shen 石中"" was indeed compiled during the Zhanguo 戰國 period(481-222);
+	D. In old Chinese star maps, every two stars of the same constellation were always painted in the same color;
+	E. None of the above.",AD
+18,2,8,1,"Choose correct statement(s):
+	A. A lunar eclipse can happen on the next day after a solar eclipse;
+	B. The day or the ""origin/beginning of a calendar"" li yuan曆元 was always in Spring;
+	C. During the Tang唐 and Song宋 dynasties, the Chinese government prohibited (=did not allow) people to study astronomy at home;
+	D. AlI Chinese calendars created before 1600, some time after their compilation, started predicting positions of the Sun and the Moon with big mistakes;
+	E. None of the above.",CD
+19,2,9,1,"Choose correct statement(s):
+	A. Acording to J. Needham, philosophical Taoism(道家) stimulated the development of science in traditional China;
+	B. According to N. Sivin. majorty of famous Chinese scholars were Taoists (道士);
+	C. Some Chinese Daoist masters (道士) were interested in scionces (in particular, mathematics, astronomy, and optics);
+	D. None of the above.",AC
+20,2,10,1,"Choose correct statement(s):
+	A. In the 17th century the Elements of Euclid were translated into Chinese from the original Greek edition of 300 BC;
+	B. When translating the Elements, M. Ricci orally explained the meaning of the book to Xu Guangqi 徐光?,and Xu wrote down his explanations in Chinese;
+	C. Between 1600 and 1699, only the Elemens of Euclid were translated into Chinese language; no other Western mathematical books were translated during this period;
+	D. F. Verbiest was the first Westerner who predicted an eclipse more precisely than Chinese astronomers;
+	E. None of the above.",B
