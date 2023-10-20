@@ -23,6 +23,7 @@ class ChatBOT:
 
     @calculate_execution_time
     def setup_openai(self):
+        # You can use local model here, for instance, llama2
         self.llm = ChatOpenAI()
 
 
