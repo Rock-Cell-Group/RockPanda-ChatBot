@@ -25,7 +25,7 @@ def save_metadata_to_db(event):
     """
     沒必要，metadata在未上傳檔案前不用進資料庫
     """
-    user_message = event.message.text.replace("/!Document_information", "").strip()
+    user_message = event.message.text.replace("/!文件資訊", "").strip()
     document_metadata = {}
     lines = user_message.split("\n")
     for line in lines:
@@ -75,7 +75,7 @@ delivery_context=DeliveryContext(is_redelivery=False)
 reply_token='e33931b497e5473e929cc3a4610aadb6' 
 message=TextMessageContent(type='text',
     id='476957575037321555',
-    text='/!Document_information\n課程=微積分\n授課老師=王小明\n類型=期中考', 
+    text='/!文件資訊\n課程=微積分\n授課老師=王小明\n類型=期中考', 
     emojis=None, 
     mention=None, 
     quote_token='IDHMbjQptp077dRGeslBrpSe2izsy4ke6-zKuE5Cp1xOtFoHXjYKtiVDjFaM80oP7lVmvKcYC8hzFEhns9HvFBFK0QEHm_fMavZ7BO1wBWnRfjpWTDsltGC_uRzdnp0UmDWoixot7BX6r4mDIgHWkA', 

@@ -80,10 +80,10 @@ def handle_message(event):
                 )
 
         # "/"傳文件資訊行為
-        if cmd == "/!Document_information":
+        if cmd == "/!文件資訊":
 
             print(f"來自{event.source.user_id}的文件資訊，已儲存至文件id：...")
-            user_message = user_message.replace("/!Document_information", "").strip()
+            user_message = user_message.replace("/!文件資訊", "").strip()
             document_metadata = {}
             lines = user_message.split("\n")
             for line in lines:

@@ -190,7 +190,7 @@ def handle_select_exam_type_postback(event, data, line_bot_api):
     # 告訴資料庫他選了甚麼考試類型
     user_service.commit_user_new_column_value(event.source.user_id, "last_postback_exam_type_reply",
                                               selected_exam_type_value)
-    
+
 
 # 從舊題目生成新題目
 def handle_generate_similar_question_postback(event, data, line_bot_api):
@@ -234,7 +234,7 @@ def handle_return_question_text_postback(event, line_bot_api):
             messages=[TextMessage(text=last_generated_question)]
         )
     )
-    
+
 # 回答生成出的新題目
 def handle_answer_to_AI_question_postback(event, line_bot_api):
     last_generated_question = user_service.get_user_column_value(event.source.user_id, "last_generated_question")
@@ -271,7 +271,7 @@ def handle_upload_document_postback(event, line_bot_api):
             reply_token=event.reply_token,
             messages=[TextMessage(text='''先填資訊 → 再傳文件
     -------資訊格式--------
-    /!Document_information
+    /!文件資訊
     課程=程式設計一
     授課老師=聘任中
     類型=第二次期中考
@@ -314,11 +314,11 @@ def handle_check_upload_status_postback(event, line_bot_api):
                 status_msg += f"\n{i+1}. 文件: {file_status.file_name}\n    審核狀態: {'已審核通過' if file_status.censor_status else '尚未審核' }。\n"
         else:
             status_msg += "您尚未上傳過文件。\n"
-            
+
     except Exception as e:
         print(f"Error in handle_check_upload_status_postback(): {e}")
         return None
-    
+
     line_bot_api.reply_message(
         ReplyMessageRequest(
             reply_token=event.reply_token,
