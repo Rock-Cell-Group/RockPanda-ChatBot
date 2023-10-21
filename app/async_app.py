@@ -3,7 +3,7 @@ import logging
 import os
 import sys
 
-from app import async_message_event
+import async_message_event
 
 if os.getenv('API_ENV') != 'production':
     from dotenv import load_dotenv
@@ -24,7 +24,8 @@ from linebot.v3.exceptions import (
 from linebot.v3.webhooks import (
     MessageEvent,
     PostbackEvent,
-    FollowEvent
+    FollowEvent,
+    StickerMessageContent
 )
 
 logging.basicConfig(level=os.getenv('LOG', 'WARNING'))
@@ -50,6 +51,9 @@ line_bot_api = AsyncMessagingApi(async_api_client)
 parser = WebhookParser(channel_secret)
 
 
+
+count = 0
+
 @app.post("/callback")
 async def handle_callback(request: Request):
     signature = request.headers['X-Line-Signature']
@@ -64,10 +68,18 @@ async def handle_callback(request: Request):
         raise HTTPException(status_code=400, detail="Invalid signature")
 
     for event in events:
-        print(event)
-        if isinstance(event, MessageEvent):
+        
+        global count
+        count += 1
+
+        print("!!!!!", count, event)
+        # if isinstance(event, MessageEvent):
+        #     print("Got MessageEvent")
+        #     await async_message_event.handle_message(event, line_bot_api)
+        if isinstance(event.message, StickerMessageContent):
             print("Got MessageEvent")
             await async_message_event.handle_message(event, line_bot_api)
+
         elif isinstance(event, PostbackEvent):
             pass  # TODO
         elif isinstance(event, FollowEvent):
