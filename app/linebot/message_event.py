@@ -154,13 +154,6 @@ def handle_message(event):
                         messages=[TextMessage(text="字數太少囉，請再輸入一次")]
                     )
                 )
-            elif len(event.message.text) > 1500:
-                line_bot_api.reply_message_with_http_info(
-                    ReplyMessageRequest(
-                        reply_token=event.reply_token,
-                        messages=[TextMessage(text="字數太多囉，請再輸入一次")]
-                    )
-                )
             else:
                 result = post_service.save_question_to_db(event)
                 print(f"來自{event.source.user_id}的提問，已儲存至id：{result.id}")
@@ -178,13 +171,6 @@ def handle_message(event):
                     ReplyMessageRequest(
                         reply_token=event.reply_token,
                         messages=[TextMessage(text="字數太少囉，請再輸入一次")]
-                    )
-                )
-            elif len(event.message.text) > 1500:
-                line_bot_api.reply_message_with_http_info(
-                    ReplyMessageRequest(
-                        reply_token=event.reply_token,
-                        messages=[TextMessage(text="字數太多囉，請再輸入一次")]
                     )
                 )
             else:

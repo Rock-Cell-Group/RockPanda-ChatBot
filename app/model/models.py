@@ -29,7 +29,7 @@ class Users(Base):
     last_postback_professor_reply = Column(String(255))  # 存last postback professor
     last_postback_exam_type_reply = Column(String(255))  # 存last postback exam_type
     last_generated_question = Column(LONGTEXT, default="") # 存上一次生成的相似題目，用來再生成下一個相似題目或是問答案用的
-    feedbacks = Column(String(LONGTEXT), default="")  # 存用戶給的反饋(可能有多則，用/分)
+    feedbacks = Column(LONGTEXT, default="")  # 存用戶給的反饋(可能有多則，用/分)
 
     create_at = Column(DateTime, default=func.now())
     modify_at = Column(DateTime, default=func.now(), onupdate=func.current_timestamp())
@@ -74,7 +74,7 @@ class Posts(Base):
     __tablename__ = 'RAG_POST'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    raw_text = Column(String(LONGTEXT), default="")  # event.message.text
+    raw_text = Column(LONGTEXT, default="")  # event.message.text
     post_type = Column(String(255), default='Unknown')  # event.message.type
     poster_uid = Column(String(255), default=-1)  # event.source.user_id
     post_id = Column(String(255), default=-1)  # event.message.id
@@ -94,7 +94,7 @@ class Posts(Base):
     public_msg_id = Column(String(255), default=-1)
     warn_text_id = Column(String(255), default=-1)
     anonymous = Column(Boolean)
-    text = Column(String(LONGTEXT), default="")
+    text = Column(LONGTEXT, default="")
     channel_id = Column(String(255), default=-1)
     channel_msg_id = Column(String(255), default=-1)
     status = Column(String(255), default='Unknown')
@@ -134,7 +134,7 @@ class Dialogue(Base):
     message_type = Column(String(255), default="")
     message_id = Column(String(255), default="")
     message_quote_token = Column(String(255), default="")
-    message_text = Column(String(LONGTEXT), default="")
+    message_text = Column(LONGTEXT, default="")
 
     # callback event message 貼圖 new column
     message_sticker_id = Column(String(255), default="")
