@@ -4,3 +4,4 @@ __pycache__/
 app.log
 serverLog.txt
 .env
+fly.toml
