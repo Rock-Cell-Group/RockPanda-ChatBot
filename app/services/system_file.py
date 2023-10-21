@@ -1,6 +1,9 @@
 from contextlib import contextmanager
 from typing import Union, List, Tuple
 from sqlalchemy import not_, or_, desc, text
+
+from app.config import settings
+from app.langchain_module.poc.clould_storage.azure_blob import blob_service_client, container_name, upload_blob_file
 from app.model import models
 from app.model.database import SessionLocal
 import uuid
@@ -224,11 +227,24 @@ def file_fetcher(dialogue):
     response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
-        file_path = f"./data/Upload_Data/{uuid.uuid4()}.{dialogue.message_file_extension}"
-        with open(file_path, "wb") as f:
-            f.write(response.content)
-            return file_path
-
+        if settings.CONFIG_TYPE == "BaseConfig":  # 只有在local 才存專案目錄
+            file_path = f"./data/Upload_Data/{uuid.uuid4()}.{dialogue.message_file_extension}"
+            with open(file_path, "wb") as f:
+                f.write(response.content)
+                return file_path
+        else:  # production 存到AZURE BLOB
+            file_path = f"./data/Upload_Data/"
+            file_name = f'{uuid.uuid4()}.{dialogue.message_file_extension}'
+            with open(file_path + file_name, "wb") as f:
+                f.write(response.content)
+                result = upload_blob_file(blob_service_client, container_name, file_path, file_name)
+                # 存完本地刪掉
+                import os
+                if os.path.exists(file_path + file_name):
+                    os.remove(file_path + file_name)
+                else:
+                    print("File not found.")
+            return result
     else:
         print(f"Request failed with status code: {response.status_code}")
         print(f"Response content: {response.text}")
