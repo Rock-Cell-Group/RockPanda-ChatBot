@@ -136,3 +136,544 @@ E. None of the above.",AB
 	C. Between 1600 and 1699, only the Elemens of Euclid were translated into Chinese language; no other Western mathematical books were translated during this period;
 	D. F. Verbiest was the first Westerner who predicted an eclipse more precisely than Chinese astronomers;
 	E. None of the above.",B
+21,3,1,1,"Which of the following statements is not true concerning DNA replication in prokaryotes?
+A. DNA replication requires only one enzyme.
+B. There is one origin of replication.
+C. DNA replication is semidiscontinuous.
+D. DNA replication is semiconservative.
+E. DNA replication is RNA dependent.",A
+22,3,2,1,"Which of the following mammalian cell DNA polymerases is not correctly matched with its function?
+A. DNA Pol £` (epsilon) ¡XDNA repair
+B. DNA Pol £_ (delta)¡Xligation of DNA strands
+C. DNA Pol £^(gamma) ¡X elongation of both strands
+D. DNA Pol £\ (alpha) ¡X priming DNA synthesis.
+E. DNA Pol £] (beta) ¡X DNA repair.",B
+23,3,3,1,"Which of the following agents causes pyrimidine dimers?
+A. ethidium bromide.
+B. X-rays.
+C. gamma radiation.
+D. alkylating agents.
+E. UV radiation.",E
+24,3,4,1,"Which of the following repair mechanisms is a damage bypass mechanism, not an actual repair mechanism?
+A. DNA photolyase
+B. base excision repair
+C. mismatch repair
+D. nonhomologous end joining
+E. recombination repair",E
+25,3,5,1,"Which enzymes remove supercoiling DNA ahead of the replication fork in bacteria replcation?
+A. gyrase
+B. photolyase
+C. DNA polymerases
+D. primases
+E. helicases",A
+26,3,6,1,"A primosome can be defined as
+A. a collection of RNA primers.
+B. a DNA molecule that is primed and ready for replication.
+C. a collection of proteins needed for synthesis of primers for replicating DNA.
+D. an area of DNA near the replication fork waiting to be replicated.
+E. the enzyme that synthesizes primers fro M13 phage replication.",C
+27,3,7,1,"Which of the following is the primase that synthesizes primers during DNA replication in E. coli?
+A. DnaB
+B. DnaA
+C. RNA polymerase
+D. DnaG
+E. HU protein",D
+28,3,8,1,"Which of the following cells do you propose to have the highest levels of telomerase activity?
+A. embryonic stem cell
+B. adipose cells
+C. skin cells
+D. neutrophils
+E. astrocytes",A
+29,3,9,1,"Which of the following is not part of the E. coli primosome?
+A. DnaA
+B. DnaG
+C. TerE
+D. oriC
+E. DnaB",C
+30,3,10,1,"Put the following steps of E. coli primosome assembly in the correct order.
+(1) Primase binds.
+(2) DnaA binds to oriC at dnaA boxes.
+(3) DnaB binds to the open complex.
+(4) DnaA, RNA polymerase, and HU protein melt the DNA.
+A. 2, 4, 3, 1
+B. 2, 4, 1, 3
+C. 4, 2, 1, 3
+D. 4, 1, 2, 3
+E. 3, 4, 1, 2",B
+31,3,11,1,"The RecBCD complex does not possesses which of the following activities?
+A. ATPase
+B. nuclease
+C. All of these are correct.
+D. polymerase
+E. helicase",D
+32,3,12,1,"Which of the following involves remarkable capacity of short segment of DNA to move from one place to another?
+A. transcription
+B. translation
+C. chromatin remodeling
+D. DNA replication
+E. DNA transposition",E
+33,3,13,1,"Which proteins have the capacity to resolve Holliday junctions?
+A. Cohesins
+B. Zip proteins
+C. Integrases
+D. The Ruv complex
+E. The RecBCD complex",D
+34,3,14,1,"Chi sites stimulate which of the following recombination pathways?
+A. E. coli RecBCD
+B. £f Int
+C. £f Red
+D. E. coli RecE
+E. E. coli RecF",A
+35,3,15,1,"What is gene conversion?
+A. non-reciprocal step in the DSB repair pathway
+B. change in the DNA sequence
+C. branch migration
+D. break of DNA strands
+E. deletion of DNA fragment",A
+36,3,16,1,"What means branch migration?
+A. formation of heteroduplex DNA
+B. dissolution occurs
+C. formation of lesion
+D. break and reformation of identical base pairs
+E. ligation occurs",D
+37,3,17,1,"Which of the following would not be a characteristic of the Tn3 transposon?
+A. inverted repeat sequences
+B. transposase gene
+C. resolvase gene
+D. antibiotic resistance gene(s)
+E. ori t site",E
+38,3,18,1,"Hybrid dysgenesis refers to the fact that in Drosophila a cross between a P male and an M female produce offspring that are
+A. blind
+B. wingless
+C. hairless
+D. sterile
+E. dead",D
+39,3,19,1,"The V region of an immunoglobulin heavy chain is made by somatic recombination of:
+A. V and H genes
+B. V and C genes
+C. V, C, and H genes
+D. V and D genes
+E. V, D, and J genes",E
+40,3,20,1,"To trigger P element transferring in Drosophila, which of the following situations must occur?
+A. an M male crossed with an M female
+B. an M male crosses with a P female
+C. a P crossed with a P female
+D. any male crossed with a P female
+E. a P male crossed with an M female",E
+41,3,21,1,"The Ds transposable element of maize cannot transpose on its own because it lacks
+A. inverted repeats
+B. transposase
+C. antibiotic resistance
+D. Tn10
+E. origin of replication",B
+42,3,22,1,"Which of the following techniques was critical for demonstrating the presynapsis and synapsis steps of homologous recombination?
+A. Southern Blot
+B. electron microscopy
+C. exonuclease digestion
+D. S1 nuclease mapping
+E. DNA footprinting",B
+43,3,23,1,"Which of the following is NOT true for immunoglobulin gene recombination signal sequences?
+A. The conserved sequences are separated by a nonconserved sequence of either a 12 bp or a 23 bp sequence.
+B. Recombination occurs between a 12 bp signal and a 23 bp signal.
+C. There is a conserved heptamer.
+D. There is a conserved nonamer.
+E. Recombination only occurs between two heptamers.",E
+44,3,24,1,"If bacterial chromosomes are catenated (interlinked) following replication, __________ is/are required to separate them.
+A. restriction enzymes
+B. a site-specific recombination system
+C. topoisomerases
+D. generalized intramolecular recombination
+E. a helicase",C
+45,3,25,1,"A theta (£c) structure is characteristic of:
+A. the concatenated replication products of a circular replicon
+B. a replication bubble at the end of a linear chromosome
+C. a circular replicon in the middle of replication
+D. a replication fork
+E. a replication bubble in the middle of a linear chromosome",C
+46,3,26,1,"In a prokaryotic replication fork, how do the leading and lagging strands differ?
+A. The lagging strand is replicated discontinuously
+B. DNA polymerase proceeds more slowly on the lagging strand
+C. The lagging strand is subject to more error and requires more repair
+D. In the lagging strand, new DNA is synthesized 3¡¬¡V5¡¬.
+E. Each strand is replicated by a unique type of polymerase",A
+47,3,27,1,"Unlike prokaryotic DNA replication, eukaryotes:
+A. do not generally have bidirectional replication
+B. do not need to have replication primed by a free 3¡¬-OH
+C. replicate new strands 3¡¬¡V5¡¬
+D. use different polymerases for leading and lagging strand replication
+E. do not have semidiscontinuous replication",D
+48,3,28,1,"Mismatch repair of heteroduplex DNA may result in:
+A. gene conversion
+B. unequal crossing over
+C. DNA lesions
+D. additional crossing over
+E. short insertion mutations",A
+49,3,29,1,"Which of the following repair systems always results in direct repair of the DNA damage?
+A. Recombination-repair
+B. Mismatch repair
+C. Photoreactivation
+D. Base excision repair
+E. Nucleotide excision repair",C
+50,3,30,1,"Following damage, what is the correct order of events during excision repair?
+A. Synthesis, incision, excision, ligation
+B. Ligation, synthesis, excision, incision
+C. Excision, incision, synthesis, ligation
+D. Incision, synthesis, ligation, excision
+E. Incision, excision, synthesis, ligation",E
+51,3,31,1,"Glycosylases and lyases are directly involved in:
+A. nucleotide excision repair
+B. mismatch repair
+C. photoreactivation
+D. base excision repair
+E. recombination-repair",D
+52,3,32,1,"Nonreplicative transposition:
+A. leaves the donor site unaltered
+B. leaves a double-strand break at the recipient site
+C. leaves a double-strand break at the donor site
+D. leaves the recipient site unaltered
+E. leaves a region of multiple tandem repeats at the donor site.",C
+53,3,33,1,"Bacterial IS elements contain:
+A. inverted terminal repeats
+B. a gene for a repressor protein
+C. a gene for an accessory protein needed for integration
+D. a region with multiple short tandem repeats
+E. direct terminal repeats",A
+54,3,34,1,"Which of the following is not a telomeric function?
+A. All of these are telomeric functions
+B. Providing a site of origin for DNA replication
+C. Protection of the chromosome end
+D. Facilitating chromosome reorganization for efficient pairing and recombination of homologous chromosomes during meiosis
+E. Allowing extension of the telomere",B
+55,3,35,1,"Which of the following is not a characteristic of prokaryotic single stranded DNA binding proteins?
+A. They aid helicase action.
+B. They stimulate homologous DNA polymerase.
+C. They keep DNA strands from annealing.
+D. They bind more tightly to ssDNA than to dsDNA.
+E. They are not essential for cell replication.",E
+56,3,36,1,"Which of the following enzymes is responsible for decatenation of Salmonella typhimurium DNA during replication?
+A. topoisomerase I
+B. topoisomerase V
+C. topoisomerase IV
+D. topoisomerase II
+E. topoisomerase III",C
+57,3,37,7,"During V(D)J gene recombination, the coding ends of segments are joined by the nonhomologous end joining pathway.
+¬O
+§_",Y
+58,3,38,7,"Retrotransposons and retroviruses are very similar except for the fact that retroviruses can generate extracellular infectious particles.
+¬O
+§_",Y
+59,3,39,7,"The presence of a pyrimidine dimer may cause it to be bypassed during replication, leaving a gap in the new strand that may then be repaired by a
+recombination-repair system.
+¬O
+§_",Y
+60,3,40,7,"A general observation about homologous recombination between homologous chromosomes during meiosis is that crossing over is equally likely at
+any point along the chromosome.
+¬O
+§_",N
+61,3,41,7,"In DNA replication, the name of the ¡§lagging¡¨ strand comes from the fact that the polymerization reaction has higher fidelity than that of the leading
+strand and so proceeds more slowly.
+¬O
+§_",N
+62,3,42,7,"The many replicons of a eukaryotic chromosome are not activated at the same time.
+¬O
+§_",Y
+63,3,44,7,"DNA damage is considered to be the same thing as a DNA mutation, such as a change from an A-T base pair to a G-C base pair.
+¬O
+§_",Y
+64,4,1,1,"Which of the following statement(s) is(are) true about gradient descent?
+(A)The gradient is the direction of the steepest descent. (Consider the case when the magnitude of the
+gradient is not zero).
+(B) The Mean Square Error (MSE) loss function for a Linear Regression model is a concave function.
+(C) A larger learning rate is not always better because the algorithm might diverge and miss the optima if
+the step size is too big.
+(D)Adding the regularization term can help to prevent overfitting.
+(E) The computation of batch gradient descent is faster than stochastic gradient descent.","C,D
+"
+65,4,2,1,"What is(are) the possible way to solve the overfitting problem?
+(A)Reduce the number of features.
+(B) Decrease the training data size.
+(C) Train model using testing data.
+(D)Add parameter regularization to the target function.
+(E) Preprocess the data.","A,D,E
+"
+66,4,3,1,"Using OLS for general linear regression to find which of the following (a, b) is the solution of
+y = a + bx that best fits the points (1, 2), (3, 5), (5, 6).
+(A) a = -1 b=1.33
+(B) a = 1.33 b=1
+(C) a = 13.3 b=10
+(D) a = -10 b=13.3",B
+67,4,4,3,"Let¡¦s assume your predictions for two samples to be 23 and 12. The ground truths of them are 20
+and 10, respectively. Please calculate the MAPE and give the answer in percentage (%) form.",17.50%
+68,4,6,1,"Which of the following statement(s) is(are) true about logistic regression?
+(A)Logistic regression is a supervised machine learning algorithm.
+(B) Logistic regression is mainly used for finding a straight line that can fit the training dataset best.
+(C) A student is rolling a fair coin, the odds ratio that he will get a head in the next throw is 0.5.
+(D)We can consider the output of logistic function as probability.
+(E) The input of the logit function must be in range of 0 to 1.","A,D,E"
+69,4,7,3,"Someone discovered a new test for covid. Let¡¦s say x is the result of the new test and p is the
+probability of getting covid. If we can fit the data x using a logistic regression logit(p) = £]% + £]""x and
+obtain £]% = -1 and £]"" = 0.5, what¡¦s the value of x to have even odds for getting covid?",2
+70,5,1,1,"Which of the following statement(s) is(are) correct about neural networks? 
+(A) The input to the ReLU function is a value between ?¡Û and + ¡Û, while its output can only be between 0
+and 1.
+(B) When the inputs of the sigmoid function becomes larger or smaller (when |x| becomes bigger), the
+derivative becomes close to one.
+(C) For binary classification, if the label y is not one-hot encoded, we can use one output node and choose
+the sigmoid activation function for the last layer. The loss is computed using binary cross-entropy loss.
+(D) For binary classification, if the label y is one-hot encoded, we can use two output nodes and choose the
+Softmax activation function for the last layer. The loss is computed using categorical cross-entropy loss.
+(E) Suppose we change the activation function of the first L-1 layers from the ReLU function to the sigmoid
+function when implementing the L-layer neural network. In that case, we will probably encounter exploding
+gradient problems.","C,D"
+71,5,2-1,7,"Ivan thought that this course's exams were very difficult, so he decided to train a model to help him get the
+correct answer for the yes-no question. He trained a model using the number of words in the question as
+input and predicted the answer for each question. The model consists of 2 layers, the first layer uses a ReLU
+activation function, and the second layer uses a sigmoid activation function. He sets a threshold, classifies
+all values less than or equal to 0.5 as 0 (no), classifies all values greater than 0.5 as 1 (yes).
+The parameters of the first layer: W1: [[0.5], [-1.0]] b1: [[0.5], [-0.5]]
+The parameters of the second layer: W2: [[0.5, -0.]]
+Please predict the model¡¦s output for the following questions (answer yes or no):
+(1) Is this exam very easy? (Input: 5 words)",No
+72,5,2-2,7,"Ivan thought that this course's exams were very difficult, so he decided to train a model to help him get the
+correct answer for the yes-no question. He trained a model using the number of words in the question as
+input and predicted the answer for each question. The model consists of 2 layers, the first layer uses a ReLU
+activation function, and the second layer uses a sigmoid activation function. He sets a threshold, classifies
+all values less than or equal to 0.5 as 0 (no), classifies all values greater than 0.5 as 1 (yes).
+The parameters of the first layer: W1: [[0.5], [-1.0]] b1: [[0.5], [-0.5]]
+The parameters of the second layer: W2: [[0.5, -0.]]
+Please predict the model¡¦s output for the following questions (answer yes or no):
+(2) Can Ivan learn how to build a neural network from assignment 3? (Input: 12 words)",Yes
+73,5,4,1,"Which of the following statement(s) is(are) correct about neural networks?
+(A) Trainable parameters include ¡§number of layers L in the neural network¡¨, ¡§activation values a[l]¡¨, and ¡§weight matrices W[l]¡¨.
+(B) The output of a Softmax activation function for a single sample input should always add up to 0 along the class dimension.
+(C) The downside of batch gradient descent is a much slower learning process because we perform only one update after processing N samples (compared to mini-batch gradient descent).
+(D) When using batch gradient descent, the convergence of the weights to the optimal weights is very stable (compared to mini-batch gradient descent).
+(E) During the forward pass, we need to store some values in the cache so we can use these values to calculate the gradient during the backward pass","C,D,E"
+74,5,5,1,"Which of the following method(s) cannot help preventing overfitting or optimize the model testing
+performance?
+(A)Retrain the model with more training iterations (more epochs)
+(B) Adding Gaussian noise to the input image data.
+(C) Dropping out some of units/neurons in the neural network.
+(D)Build a more complex and deeper machining learning model.
+(E) Adding a regularization term in the loss function.","A,D"
+75,5,6,1,"Which of the following statement(s) is(are) correct about Deep Learning optimization? 
+(A)SGD adds more noise to the learning process. Although it solves the generalization error problem, it
+increases runtime and makes gradients very noisy.
+(B) Momentum is a method for accelerating learning using SGD to avoid getting stuck in a local optimum or
+a plateau.
+(C) Nesterov Momentum would first take a step in the direction of the accumulated gradient, calculate the
+gradient, and then make a correction. Since NAG could overlook one step ahead, it would be faster than
+Momentum-Based Gradient Descent.
+(D)RMSProp could solve the problem of Adagrad by adding a decay parameter that adjusts gradient weight
+to update the learning rate.
+(E) Adam is a method that uses RMSProp and Momentum and takes bias correction into account during
+gradient updates.","A,B,C,D,E"
+76,5,7,1,"Which of the following statements is/are correct about deep learning? (11%)
+(A) As the number of the layers in the deep learning network increases, it is more likely to have the gradient
+vanishing problem.
+(B) A decision tree with a huge depth can be regarded as a deep learning approach..
+(C) We can use a larger mini batch to deal with noisy gradient estimates.
+(D)If the objective function is not differentiable, we can still apply SGD to get the local or global
+maximum.
+(E) For mini-batch, the size of training examples does not affect the computation time on each update,
+which allows faster convergence on huge datasets.","A,C,E"
+77,5,8,1,"What is(are) the possible way(s) to perform data augmentation on structured data in Assignment 2 (diabetes
+prediction) to balance the dataset? 
+(A) Repeat the data to make two classes have the same number.
+(B) Flip the features (reserve the order of features) to create new data, i.e., features: [1, 2, 3, 4, 5] > [5, 4, 3,
+2, 1].
+(C) Create new data by randomly shuffling the features, i.e., features: [1, 2, 3, 4, 5] > [5, 3, 2, 1, 4].
+(D) Create new data by adding random noises to the features with continuous values.
+(E) Repeatedly add two data (vectors) together and make it a new one.",D
+78,6,1-1,3,"Consider the I-type instruction: addi.
+What additional logic blocks, if any, are needed for the five-stage pipelined processor
+to correctly execute an addi instruction?","No additional logic blocks are needed.
+"
+79,6,1-2,3,"Consider the I-type instruction: addi.
+How many bits should the EX/MEM pipeline register contain? Give your reasons.","ALUop = 00, ALUsrc = 1, MemRead = 0, MemWrite = 0,
+MemtoReg = 0, Branch = 0, RegWrite = 1"
+80,6,3-1,3,"Consider the execution of the following sequence of four
+instructions on the five-stage pipelined processor:
+sub x10, x11, x12
+add x11, x6, x12
+beq x11, x12, LABEL
+sd x11, 0(x12)
+
+Suppose the third instruction (beq) is detected to have a TLB miss in the
+IF stage (i.e., in clock cycle 3), causing an exception.
+
+Suppose in clock cycle 4, an ALU malfunction exception
+occurs. 
+
+What instructions will appear in the IF, ID, EX, and MEM
+stages, respectively, in clock cycle 5?","IF: the first instruction of the exception handler
+ID: NOP instruction (or bubble)
+EX: NOP instruction (or bubble)
+MEM: NOP instruction (or bubble)"
+81,6,3-2,3,"Consider the execution of the following sequence of four
+instructions on the five-stage pipelined processor:
+sub x10, x11, x12
+add x11, x6, x12
+beq x11, x12, LABEL+E5
+sd x11, 0(x12)
+
+Suppose the third instruction (beq) is detected to have a TLB miss in the
+IF stage (i.e., in clock cycle 3), causing an exception.
+
+Suppose in clock cycle 4, an ALU malfunction exception
+occurs. 
+
+What instructions will appear in the IF, ID, EX, and MEM
+stages, respectively, in clock cycle 4? Note that each instruction in your
+answer should be one chosen from the given four instructions, the NOP
+instruction (or bubble), and the first instruction of the exception handler.","the address of beq x11, x12, LABEL"
+82,6,3-3,3,"Consider the execution of the following sequence of four
+instructions on the five-stage pipelined processor:
+sub x10, x11, x12
+add x11, x6, x12
+beq x11, x12, LABEL
+sd x11, 0(x12)
+
+Suppose the third instruction (beq) is detected to have a TLB miss in the
+IF stage (i.e., in clock cycle 3), causing an exception.
+
+Suppose in clock cycle 4, an ALU malfunction exception
+occurs. 
+
+What instructions will appear in the IF, ID, EX, and MEM
+stages, respectively, in clock cycle 5?","IF: the first instruction of the exception handler
+ID: NOP instruction (or bubble)
+EX: NOP instruction (or bubble)
+MEM: NOP instruction (or bubble)"
+83,6,3-4,3,"Consider the execution of the following sequence of four
+instructions on the five-stage pipelined processor:
+sub x10, x11, x12
+add x11, x6, x12
+beq x11, x12, LABEL
+sd x11, 0(x12)
+
+Suppose the third instruction (beq) is detected to have a TLB miss in the
+IF stage (i.e., in clock cycle 3), causing an exception.
+
+What value will be stored in the SEPC (Supervisor Exception
+Program Counter) at the end of clock cycle 4?","the address of add x11, x6, x12"
+84,6,4,3,"Show all your work to determine whether 100101000101 is a correct
+12-bit Hamming single error correcting code word or not. If it is an incorrect
+code word, you also need to correct it.","Bits 1, 3, 5, 7, 9, 11 should be even parity, but they are not
+
+100101000101¡÷ H=h8h4h2h1 = _ _ _ 1
+
+Bits 2, 3, 6, 7, 10, 11 should be even parity, and they are
+
+100101000101 ¡÷ H=h8h4h2h1 = _ _ 0 1
+
+Bits 4, 5, 6, 7, 12 should be even parity, but they are not
+
+100101000101 ¡÷ H=h8h4h2h1 = _ 1 0 1
+
+Bits 8, 9, 10, 11, 12 should be even parity, and they are
+
+100101000101 ¡÷ H=h8h4h2h1 = 0 1 0 1
+4 + 1 = 5, and bit 5 is in error and can be corrected
+After correction: 100111000101"
+85,6,5-1,3,"Consider a processor with one level of cache. Assume that the cache has
+the hit time of 2 clock cycles, each main memory access (including all the miss
+handling) takes 100 clock cycles, and the average memory access time (AMAT) per
+instruction is 22 clock cycles. Show all your work when answering the following
+questions.
+
+What is the cache miss rate per instruction?","2 + miss_rate ¡Ñ 100 = 22, miss_rate = 20%"
+86,6,5-2,3,"Consider a processor with one level of cache. Assume that the cache has
+the hit time of 2 clock cycles, each main memory access (including all the miss
+handling) takes 100 clock cycles, and the average memory access time (AMAT) per
+instruction is 22 clock cycles. Show all your work when answering the following
+questions.
+
+Suppose you want to reduce the AMAT per instruction to 10 clock cycles
+by adding a second-level cache. If the hit time of the second-level cache takes
+15 clock cycles, what is the local miss rate per instruction of the second-level
+cache?","Assume the local miss rate per instruction of the second_level cache is x
+2 + 20% ¡Ñ 15 + 20% ¡Ñ x ¡Ñ 100 = 10
+x = 25%"
+87,6,6-1,3,"Suppose you are designing a direct-mapped cache of a fixed capacity
+and considering one of the following two possible configurations: (i) more data
+elements per block but fewer blocks; (ii) fewer data elements per block but more
+blocks.
+
+Give one advantage and one disadvantage of each configuration.","(i) advantages: Make better use of spatial locality
+disadvantage: Increase the miss penalty
+(and may increase miss rate due to more competition)
+
+(ii) advantage: Have smaller miss penalty (than configuration (i))
+disadvantage: May increase miss rate (due to spatial locality)."
+88,6,6-2,3,"Suppose you are designing a direct-mapped cache of a fixed capacity
+and considering one of the following two possible configurations: (i) more data
+elements per block but fewer blocks; (ii) fewer data elements per block but more
+blocks.
+
+Which configuration is a better choice if there is a very high frequency of accessing data
+in consecutive memory addresses? Why?",configuration (i) (1 point) as it can better exploit the spatial locality
+89,6,8-1,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
+bits, each page has 4KiB, and the main memory has 32KiB. Each process has a single-
+level page table, and for each page table entry, 5 bits are reserved for the operating system
+functions (valid, reference, dirty, etc.) and the other bits are used to store a physical page
+number. Note that the disk addresses of all virtual pages of a process are stored in another
+data structure which is separate from the page table. Show all your work when
+answering the following questions. 
+
+What is the maximum size (in bytes) of virtual memory that a process can have?",Each virtual address has 16 bits so maximum size of virtual memory = 64 KiB
+90,6,8-2,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
+bits, each page has 4KiB, and the main memory has 32KiB. Each process has a single-
+level page table, and for each page table entry, 5 bits are reserved for the operating system
+functions (valid, reference, dirty, etc.) and the other bits are used to store a physical page
+number. Note that the disk addresses of all virtual pages of a process are stored in another
+data structure which is separate from the page table. Show all your work when
+answering the following questions. 
+
+ What is the maximum number of virtual pages that a process can have?",virtual space size / page size = 64KiB / 4KiB = 16 pages
+91,6,8-3,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
+bits, each page has 4KiB, and the main memory has 32KiB. Each process has a single-
+level page table, and for each page table entry, 5 bits are reserved for the operating system
+functions (valid, reference, dirty, etc.) and the other bits are used to store a physical page
+number. Note that the disk addresses of all virtual pages of a process are stored in another
+data structure which is separate from the page table. Show all your work when
+answering the following questions. 
+
+How many bits are required for each page table entry?","32 KiB / 4 KiB = 8(pages), use 3 bits to record the physical page number
+each page table entry has 5+3 = 8 bits."
+92,6,8-4,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
+bits, each page has 4KiB, and the main memory has 32KiB. Each process has a single-
+level page table, and for each page table entry, 5 bits are reserved for the operating system
+functions (valid, reference, dirty, etc.) and the other bits are used to store a physical page
+number. Note that the disk addresses of all virtual pages of a process are stored in another
+data structure which is separate from the page table. Show all your work when
+answering the following questions. 
+
+What is the maximum size (in bytes) that a page table can have?",8 bits x 16 entries = 16 bytes 
+93,7,1-a,4,Explain why the design of kernel mode and the privileged instructions can allow OS to protect a computing system?,"The operation of a computer system is protected by the
+privileged instructions.
+Privileged instruction can only be executed in kernel mode. So if a user want to execute privileged instructions, he must enter the kernel mode by calling
+system calls to execute these instruction on behavior of the user.
+Therefore, the OS can have the control to protect the system."
+94,7,1-b,4,Why we cannot fully protect IO devices by making all the IO instructions as privileged instructions?,"If the memory is not protected, the hacker can still overwrite the IO data and instruction."
+95,7,1-c,4,"As we known, memory access instructions are NOT privileged instructions. What would be the main problem if we make them privileged instructions?","every memory access instruction has to trigger system call. It will be time consuming and
+cause performance degradation."
+96,7,1-d,4,"Consider an instruction that is used to disable interrupt, should it be a privileged instruction? Explain why.","Yes, because it can affect other processes."
+97,7,2-a,4,What is POSIX interface?,POSIX is the standard API interface defined by a class of OS.
+98,7,2-b,4,"Why a program only needs to re-compiled, but not re-written when running across different OS with the same POSIX interface?","Because the OS have the same API, the user code only needs to be re-compiled."
+99,7,4-b,4,Why creating a user thread is faster than a kernel thread?,it doesn?™t involve system calls.
+100,7,4-c,4,Does it require context switch when switching the execution among user threads?,"No, context switch only needs when we switch kernel threads."
+101,7,8-a,4,Why LRU can often achieve a pretty good page fault rate in practice?,"Because program has locality, the page recently used is likely to be used again soon.
+Wrong answer: LRU is an approximation of the optimal algorithm"
+102,7,8-b,4,Explain why stack algorithm can never cause Belady's anomaly.,"Stack algorithm means the page stored with N frame is a subset of the page stored with N+1 frame.
+Therefore, all the page that are hits with N frame will still be hits with N+1 frame.
+Hence, the number of page faults with N+1 framework will not be more that the result with N frame."
+103,8,7,7,"In Round-robin scheduling, the time quantum should be small with respect to the context-switch time.",FALSE
+104,8,13,7,There may have transition from the READY state to the WAITING state.,FALSE
+105,8,10,7,Linux's Completely Fair Scheduler (CFS) yields constant fairness but a variable switching rate.,TRUE
+106,8,6,7,Process-contention scope involves the decision of which kernel thread to schedule onto which CPU.,FALSE
+107,8,4,7,Cancellation points are associated with asynchronous cancellation.,TRUE
+,,,,,
+,,,,,
+,,,,,
+,,,,,

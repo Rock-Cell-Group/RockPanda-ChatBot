@@ -1,3 +1,12 @@
 id,user_id,file_name,file_path,file_size,file_extension,file_status,create_at,note,uuid_name,azure_container_name,azure_blob_name,file_purpose,is_file_useful,manager_id,manager_comment,censor_status,ocr_status,ocr_text,knowledge_department,knowledge_professor,knowledge_course,knowledge_year,question_department,question_professor,question_course,question_year,question_semester,question_exam_type,question_exam_question_type
 1,NULL,PreMS_midterm.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,琅元,前近代科學史,2015,上學期,期中考,1
 2,NULL,PreMS_final.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,琅元,前近代科學史,2015,上學期,期末考,1
+3,NULL,MCB3_2022_final.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,張壯榮,分子與細胞生物學三,2022,下學期,期末考,NULL
+4,NULL,Machine_Learning_exam1.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,郭柏志,機器學習概論,2022,上學期,第一次小考,NULL
+5,NULL,Machine_Learning_exam3.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,郭柏志,機器學習概論,2022,上學期,第三次小考,NULL
+6,NULL,CO_final.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,王廷基,計算機組織,2021,下學期,期末考,NULL
+7,NULL,10910_OS_Chao_mid.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,周志遠,作業系統,2022,上學期,期中考,4
+8,NULL,10820_OS_Wang_mid1.pdf,NULL,NULL,.pdf,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,王家祥,作業系統,2020,下學期,期中考,7
+9,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+10,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+11,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

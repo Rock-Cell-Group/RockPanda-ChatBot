@@ -18,7 +18,7 @@ class ChatBOT:
         self.OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
         os.environ['OPENAI_API_KEY'] = self.OPENAI_API_KEY
         self.setup_openai()
-        self.setup_memory()
+        # self.setup_memory()
         # self.setup_chat_history_from_memory()
 
     @calculate_execution_time
