@@ -136,8 +136,8 @@ def delete_first_n_feedback_records(user_id: str, n: int):
                 column_value = getattr(user_to_update, "feedbacks")
                 if not column_value:
                     return
-                # 將字符串按照"/feedback"分隔為列表
-                feedbacks_list = column_value.split('/feedback')
+                # 將字符串按照"/!feedback"分隔為列表
+                feedbacks_list = column_value.split('/!feedback')
                 
                 # 檢查n是否大於等於列表的長度
                 if n > len(feedbacks_list):
@@ -151,7 +151,7 @@ def delete_first_n_feedback_records(user_id: str, n: int):
                     feedbacks_list = feedbacks_list[n:]
                     
                     # 更新屬性為以"/feedback"分隔的字符串
-                    updated_feedbacks = '/feedback'.join(feedbacks_list)
+                    updated_feedbacks = '/!feedback'.join(feedbacks_list)
                     setattr(user_to_update, "feedbacks", updated_feedbacks)
                     
                     # 提交更改

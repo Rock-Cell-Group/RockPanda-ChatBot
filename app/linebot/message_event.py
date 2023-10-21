@@ -80,10 +80,10 @@ def handle_message(event):
                 )
 
         # "/"傳文件資訊行為
-        if cmd == "/Document_information":
+        if cmd == "/!Document_information":
 
             print(f"來自{event.source.user_id}的文件資訊，已儲存至文件id：...")
-            user_message = user_message.replace("/Document_information", "").strip()
+            user_message = user_message.replace("/!Document_information", "").strip()
             document_metadata = {}
             lines = user_message.split("\n")
             for line in lines:
@@ -117,8 +117,8 @@ def handle_message(event):
                     )
                 )
 
-        # "/投稿"行為
-        elif cmd == "/投稿":
+        # "/!投稿"行為
+        elif cmd == "/!投稿":
             # TODO 檢查投稿格式
             event.message.text = "\n".join(user_message.split("\n")[1:])
             result = post_service.save_post_to_db(event)
@@ -131,7 +131,7 @@ def handle_message(event):
                 )
             )
 
-        elif cmd == "/feedback":
+        elif cmd == "/!feedback":
             # TODO 意見存到db。
             if user_service.append_user_column_value(event.source.user_id, "feedbacks", user_message):
                 print(f"來自{event.source.user_id}的反饋，已儲存至feedbacks")

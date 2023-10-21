@@ -38,7 +38,7 @@ class JSON_formated_content:
                 "data": "action=uploadDocument",
                 "displayText": "上傳文件",
                 "inputOption": "openKeyboard",
-                "fillInText": "/Document_information\n課程=\n授課老師=\n類型="
+                "fillInText": "/!Document_information\n課程=\n授課老師=\n類型="
             },
             {
                 "type": "postback",

@@ -115,7 +115,7 @@ def rich_menu_object_json():
             # "data": "action=commit_post",
             # "displayText": "投稿一則快訊",
             # "inputOption": "openKeyboard",
-            # "fillInText": "/投稿\n---\n發佈者名稱: \n內容類別: \n發佈內容: \n發佈效期: \n學號: \n---"
+            # "fillInText": "/!投稿\n---\n發佈者名稱: \n內容類別: \n發佈內容: \n發佈效期: \n學號: \n---"
             # }
             # },
             # {
@@ -125,7 +125,7 @@ def rich_menu_object_json():
             # "data": "action=commit_feedback",
             # "displayText": "填寫反饋",
             # "inputOption": "openKeyboard",
-            # "fillInText": "/feedback\n:"
+            # "fillInText": "/!feedback\n:"
             # }
             # }
         ]
