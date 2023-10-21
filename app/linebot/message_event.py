@@ -179,7 +179,7 @@ def handle_message(event):
                         messages=[TextMessage(text="總字數不得超過200字！")]
                     )
                 )
-            elif len(event.message.text) < 15:
+            elif len(event.message.text) < 30:
                 line_bot_api.reply_message_with_http_info(
                     ReplyMessageRequest(
                         reply_token=event.reply_token,
