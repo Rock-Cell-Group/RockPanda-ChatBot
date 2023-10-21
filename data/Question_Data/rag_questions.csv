@@ -60,10 +60,10 @@ D. According to a definition of Euclid, every ""line"" is a collection of an inf
 E. None of the above",C
 9,1,9,1,"Which statements) below are correct?
 A. According to the logic of Stoics, today the statement ""today is Tuesday or today is April 21, 2015"" is true (here ""or"" is exclusive);
-B. According to the logic of Stoics, the statement ""if 2¡D2=4 then 3¡D3=9"" is true;
-C. According to the logic of Stoics, the statement ""1f 2¡D2=4 then 3¡D3=10"" is true;
-D. According to the logic of Stoics, the statement ""if 2¡D2=5 then 3¡D3=10"" is true;
-E. According to the logic of Stoics, the statement ""if 2¡D2=5 then 3¡D3=9"" is true;
+B. According to the logic of Stoics, the statement ""if 2ï¼Ž2=4 then 3ï¼Ž3=9"" is true;
+C. According to the logic of Stoics, the statement ""1f 2ï¼Ž2=4 then 3ï¼Ž3=10"" is true;
+D. According to the logic of Stoics, the statement ""if 2ï¼Ž2=5 then 3ï¼Ž3=10"" is true;
+E. According to the logic of Stoics, the statement ""if 2ï¼Ž2=5 then 3ï¼Ž3=9"" is true;
 F. None of the above.",BDE
 10,1,10,1,"Consider the premises:
 Premise 1: ""if a student studies hard and his/her professor is nice, then the student does not fail the exam"";
@@ -102,9 +102,9 @@ E. None of the above.",AB
 	E. None of the above.",ABC
 15,2,5,1,"Choose correct statement(s):
 	A. The smaller number that cannot be represented with 13 counting rods is 499;
-	B. The oldest Chinese mathematical books, such as the Jiuzhang suanshu¤E³¹ºâ¼Æ(Computational methods of nine categories, also known as Nine Chapters of Mathematical Procedure, etc.), contained axioms, theorems, and common notions;
-	C. The abacus(suan pan ºâ½L) was used in China long before the counting rods;
-	D. There is a way to solve the first problem of the Mathematical Treatise of Sea Island®ü®qºâ¸g without using the concept of similar triangles;
+	B. The oldest Chinese mathematical books, such as the Jiuzhang suanshuä¹ç« ç®—æ•¸(Computational methods of nine categories, also known as Nine Chapters of Mathematical Procedure, etc.), contained axioms, theorems, and common notions;
+	C. The abacus(suan pan ç®—ç›¤) was used in China long before the counting rods;
+	D. There is a way to solve the first problem of the Mathematical Treatise of Sea Islandæµ·å³¶ç®—ç¶“ without using the concept of similar triangles;
 	E. None of the above.",D
 16,2,6,1,"If a Chinese mathematician of the 14th century had only 5 red and 10 black counting rods,he still would be able to represent the polynomial..
 	A. 7x+2y-5z-9u;
@@ -115,24 +115,24 @@ E. None of the above.",AB
 	F. None of the above.",ACE
 17,2,7,1,"Choose correct statement(s):
 	A. The Chinese observed starry sky and gave names to some stars and constellations as early as the 24th century BC;
-	B. the position of ""North celestial pole"" (the conter of the apparent rotation of celestial sphere) among the stars is now the same as during the lifetime of the mathematician Qin Jiushao ¯³¤E»à;
-	C. According to the invesigation of Sun Xiaochun and Kistemaker, the star catalogue called now ""the catalogue of Shi Shen ¥Û¤¤"" was indeed compiled during the Zhanguo ¾Ô°ê period(481-222);
+	B. the position of ""North celestial pole"" (the conter of the apparent rotation of celestial sphere) among the stars is now the same as during the lifetime of the mathematician Qin Jiushao ç§¦ä¹éŸ¶;
+	C. According to the invesigation of Sun Xiaochun and Kistemaker, the star catalogue called now ""the catalogue of Shi Shen çŸ³ä¸­"" was indeed compiled during the Zhanguo æˆ°åœ‹ period(481-222);
 	D. In old Chinese star maps, every two stars of the same constellation were always painted in the same color;
 	E. None of the above.",AD
 18,2,8,1,"Choose correct statement(s):
 	A. A lunar eclipse can happen on the next day after a solar eclipse;
-	B. The day or the ""origin/beginning of a calendar"" li yuan¾ä¤¸ was always in Spring;
-	C. During the Tang­ð and Song§º dynasties, the Chinese government prohibited (=did not allow) people to study astronomy at home;
+	B. The day or the ""origin/beginning of a calendar"" li yuanæ›†å…ƒ was always in Spring;
+	C. During the Tangå” and Songå®‹ dynasties, the Chinese government prohibited (=did not allow) people to study astronomy at home;
 	D. AlI Chinese calendars created before 1600, some time after their compilation, started predicting positions of the Sun and the Moon with big mistakes;
 	E. None of the above.",CD
 19,2,9,1,"Choose correct statement(s):
-	A. Acording to J. Needham, philosophical Taoism(¹D®a) stimulated the development of science in traditional China;
-	B. According to N. Sivin. majorty of famous Chinese scholars were Taoists (¹D¤h);
-	C. Some Chinese Daoist masters (¹D¤h) were interested in scionces (in particular, mathematics, astronomy, and optics);
+	A. Acording to J. Needham, philosophical Taoism(é“å®¶) stimulated the development of science in traditional China;
+	B. According to N. Sivin. majorty of famous Chinese scholars were Taoists (é“å£«);
+	C. Some Chinese Daoist masters (é“å£«) were interested in scionces (in particular, mathematics, astronomy, and optics);
 	D. None of the above.",AC
 20,2,10,1,"Choose correct statement(s):
 	A. In the 17th century the Elements of Euclid were translated into Chinese from the original Greek edition of 300 BC;
-	B. When translating the Elements, M. Ricci orally explained the meaning of the book to Xu Guangqi ®}¥ú?,and Xu wrote down his explanations in Chinese;
+	B. When translating the Elements, M. Ricci orally explained the meaning of the book to Xu Guangqi å¾å…‰?,and Xu wrote down his explanations in Chinese;
 	C. Between 1600 and 1699, only the Elemens of Euclid were translated into Chinese language; no other Western mathematical books were translated during this period;
 	D. F. Verbiest was the first Westerner who predicted an eclipse more precisely than Chinese astronomers;
 	E. None of the above.",B
@@ -143,11 +143,11 @@ C. DNA replication is semidiscontinuous.
 D. DNA replication is semiconservative.
 E. DNA replication is RNA dependent.",A
 22,3,2,1,"Which of the following mammalian cell DNA polymerases is not correctly matched with its function?
-A. DNA Pol £` (epsilon) ¡XDNA repair
-B. DNA Pol £_ (delta)¡Xligation of DNA strands
-C. DNA Pol £^(gamma) ¡X elongation of both strands
-D. DNA Pol £\ (alpha) ¡X priming DNA synthesis.
-E. DNA Pol £] (beta) ¡X DNA repair.",B
+A. DNA Pol Îµ (epsilon) â€”DNA repair
+B. DNA Pol Î´ (delta)â€”ligation of DNA strands
+C. DNA Pol Î³(gamma) â€” elongation of both strands
+D. DNA Pol Î± (alpha) â€” priming DNA synthesis.
+E. DNA Pol Î² (beta) â€” DNA repair.",B
 23,3,3,1,"Which of the following agents causes pyrimidine dimers?
 A. ethidium bromide.
 B. X-rays.
@@ -220,8 +220,8 @@ D. The Ruv complex
 E. The RecBCD complex",D
 34,3,14,1,"Chi sites stimulate which of the following recombination pathways?
 A. E. coli RecBCD
-B. £f Int
-C. £f Red
+B. Î» Int
+C. Î» Red
 D. E. coli RecE
 E. E. coli RecF",A
 35,3,15,1,"What is gene conversion?
@@ -284,7 +284,7 @@ B. a site-specific recombination system
 C. topoisomerases
 D. generalized intramolecular recombination
 E. a helicase",C
-45,3,25,1,"A theta (£c) structure is characteristic of:
+45,3,25,1,"A theta (Î¸) structure is characteristic of:
 A. the concatenated replication products of a circular replicon
 B. a replication bubble at the end of a linear chromosome
 C. a circular replicon in the middle of replication
@@ -294,12 +294,12 @@ E. a replication bubble in the middle of a linear chromosome",C
 A. The lagging strand is replicated discontinuously
 B. DNA polymerase proceeds more slowly on the lagging strand
 C. The lagging strand is subject to more error and requires more repair
-D. In the lagging strand, new DNA is synthesized 3¡¬¡V5¡¬.
+D. In the lagging strand, new DNA is synthesized 3â€²â€“5â€².
 E. Each strand is replicated by a unique type of polymerase",A
 47,3,27,1,"Unlike prokaryotic DNA replication, eukaryotes:
 A. do not generally have bidirectional replication
-B. do not need to have replication primed by a free 3¡¬-OH
-C. replicate new strands 3¡¬¡V5¡¬
+B. do not need to have replication primed by a free 3â€²-OH
+C. replicate new strands 3â€²â€“5â€²
 D. use different polymerases for leading and lagging strand replication
 E. do not have semidiscontinuous replication",D
 48,3,28,1,"Mismatch repair of heteroduplex DNA may result in:
@@ -357,29 +357,29 @@ C. topoisomerase IV
 D. topoisomerase II
 E. topoisomerase III",C
 57,3,37,7,"During V(D)J gene recombination, the coding ends of segments are joined by the nonhomologous end joining pathway.
-¬O
-§_",Y
+æ˜¯
+å¦",Y
 58,3,38,7,"Retrotransposons and retroviruses are very similar except for the fact that retroviruses can generate extracellular infectious particles.
-¬O
-§_",Y
+æ˜¯
+å¦",Y
 59,3,39,7,"The presence of a pyrimidine dimer may cause it to be bypassed during replication, leaving a gap in the new strand that may then be repaired by a
 recombination-repair system.
-¬O
-§_",Y
+æ˜¯
+å¦",Y
 60,3,40,7,"A general observation about homologous recombination between homologous chromosomes during meiosis is that crossing over is equally likely at
 any point along the chromosome.
-¬O
-§_",N
-61,3,41,7,"In DNA replication, the name of the ¡§lagging¡¨ strand comes from the fact that the polymerization reaction has higher fidelity than that of the leading
+æ˜¯
+å¦",N
+61,3,41,7,"In DNA replication, the name of the â€œlaggingâ€ strand comes from the fact that the polymerization reaction has higher fidelity than that of the leading
 strand and so proceeds more slowly.
-¬O
-§_",N
+æ˜¯
+å¦",N
 62,3,42,7,"The many replicons of a eukaryotic chromosome are not activated at the same time.
-¬O
-§_",Y
+æ˜¯
+å¦",Y
 63,3,44,7,"DNA damage is considered to be the same thing as a DNA mutation, such as a change from an A-T base pair to a G-C base pair.
-¬O
-§_",Y
+æ˜¯
+å¦",Y
 64,4,1,1,"Which of the following statement(s) is(are) true about gradient descent?
 (A)The gradient is the direction of the steepest descent. (Consider the case when the magnitude of the
 gradient is not zero).
@@ -402,7 +402,7 @@ y = a + bx that best fits the points (1, 2), (3, 5), (5, 6).
 (B) a = 1.33 b=1
 (C) a = 13.3 b=10
 (D) a = -10 b=13.3",B
-67,4,4,3,"Let¡¦s assume your predictions for two samples to be 23 and 12. The ground truths of them are 20
+67,4,4,3,"Letâ€™s assume your predictions for two samples to be 23 and 12. The ground truths of them are 20
 and 10, respectively. Please calculate the MAPE and give the answer in percentage (%) form.",17.50%
 68,4,6,1,"Which of the following statement(s) is(are) true about logistic regression?
 (A)Logistic regression is a supervised machine learning algorithm.
@@ -410,11 +410,11 @@ and 10, respectively. Please calculate the MAPE and give the answer in percentag
 (C) A student is rolling a fair coin, the odds ratio that he will get a head in the next throw is 0.5.
 (D)We can consider the output of logistic function as probability.
 (E) The input of the logit function must be in range of 0 to 1.","A,D,E"
-69,4,7,3,"Someone discovered a new test for covid. Let¡¦s say x is the result of the new test and p is the
-probability of getting covid. If we can fit the data x using a logistic regression logit(p) = £]% + £]""x and
-obtain £]% = -1 and £]"" = 0.5, what¡¦s the value of x to have even odds for getting covid?",2
+69,4,7,3,"Someone discovered a new test for covid. Letâ€™s say x is the result of the new test and p is the
+probability of getting covid. If we can fit the data x using a logistic regression logit(p) = Î²% + Î²""x and
+obtain Î²% = -1 and Î²"" = 0.5, whatâ€™s the value of x to have even odds for getting covid?",2
 70,5,1,1,"Which of the following statement(s) is(are) correct about neural networks? 
-(A) The input to the ReLU function is a value between ?¡Û and + ¡Û, while its output can only be between 0
+(A) The input to the ReLU function is a value between ?âˆž and + âˆž, while its output can only be between 0
 and 1.
 (B) When the inputs of the sigmoid function becomes larger or smaller (when |x| becomes bigger), the
 derivative becomes close to one.
@@ -432,7 +432,7 @@ activation function, and the second layer uses a sigmoid activation function. He
 all values less than or equal to 0.5 as 0 (no), classifies all values greater than 0.5 as 1 (yes).
 The parameters of the first layer: W1: [[0.5], [-1.0]] b1: [[0.5], [-0.5]]
 The parameters of the second layer: W2: [[0.5, -0.]]
-Please predict the model¡¦s output for the following questions (answer yes or no):
+Please predict the modelâ€™s output for the following questions (answer yes or no):
 (1) Is this exam very easy? (Input: 5 words)",No
 72,5,2-2,7,"Ivan thought that this course's exams were very difficult, so he decided to train a model to help him get the
 correct answer for the yes-no question. He trained a model using the number of words in the question as
@@ -441,10 +441,10 @@ activation function, and the second layer uses a sigmoid activation function. He
 all values less than or equal to 0.5 as 0 (no), classifies all values greater than 0.5 as 1 (yes).
 The parameters of the first layer: W1: [[0.5], [-1.0]] b1: [[0.5], [-0.5]]
 The parameters of the second layer: W2: [[0.5, -0.]]
-Please predict the model¡¦s output for the following questions (answer yes or no):
+Please predict the modelâ€™s output for the following questions (answer yes or no):
 (2) Can Ivan learn how to build a neural network from assignment 3? (Input: 12 words)",Yes
 73,5,4,1,"Which of the following statement(s) is(are) correct about neural networks?
-(A) Trainable parameters include ¡§number of layers L in the neural network¡¨, ¡§activation values a[l]¡¨, and ¡§weight matrices W[l]¡¨.
+(A) Trainable parameters include â€œnumber of layers L in the neural networkâ€, â€œactivation values a[l]â€, and â€œweight matrices W[l]â€.
 (B) The output of a Softmax activation function for a single sample input should always add up to 0 along the class dimension.
 (C) The downside of batch gradient descent is a much slower learning process because we perform only one update after processing N samples (compared to mini-batch gradient descent).
 (D) When using batch gradient descent, the convergence of the weights to the optimal weights is very stable (compared to mini-batch gradient descent).
@@ -485,14 +485,14 @@ prediction) to balance the dataset?
 (C) Create new data by randomly shuffling the features, i.e., features: [1, 2, 3, 4, 5] > [5, 3, 2, 1, 4].
 (D) Create new data by adding random noises to the features with continuous values.
 (E) Repeatedly add two data (vectors) together and make it a new one.",D
-78,6,1-1,3,"Consider the I-type instruction: addi.
+78,6,1-a,3,"Consider the I-type instruction: addi.
 What additional logic blocks, if any, are needed for the five-stage pipelined processor
 to correctly execute an addi instruction?","No additional logic blocks are needed.
 "
-79,6,1-2,3,"Consider the I-type instruction: addi.
+79,6,1-c,3,"Consider the I-type instruction: addi.
 How many bits should the EX/MEM pipeline register contain? Give your reasons.","ALUop = 00, ALUsrc = 1, MemRead = 0, MemWrite = 0,
 MemtoReg = 0, Branch = 0, RegWrite = 1"
-80,6,3-1,3,"Consider the execution of the following sequence of four
+80,6,4-c,3,"Consider the execution of the following sequence of four
 instructions on the five-stage pipelined processor:
 sub x10, x11, x12
 add x11, x6, x12
@@ -510,7 +510,7 @@ stages, respectively, in clock cycle 5?","IF: the first instruction of the excep
 ID: NOP instruction (or bubble)
 EX: NOP instruction (or bubble)
 MEM: NOP instruction (or bubble)"
-81,6,3-2,3,"Consider the execution of the following sequence of four
+81,6,4-a,3,"Consider the execution of the following sequence of four
 instructions on the five-stage pipelined processor:
 sub x10, x11, x12
 add x11, x6, x12
@@ -527,25 +527,7 @@ What instructions will appear in the IF, ID, EX, and MEM
 stages, respectively, in clock cycle 4? Note that each instruction in your
 answer should be one chosen from the given four instructions, the NOP
 instruction (or bubble), and the first instruction of the exception handler.","the address of beq x11, x12, LABEL"
-82,6,3-3,3,"Consider the execution of the following sequence of four
-instructions on the five-stage pipelined processor:
-sub x10, x11, x12
-add x11, x6, x12
-beq x11, x12, LABEL
-sd x11, 0(x12)
-
-Suppose the third instruction (beq) is detected to have a TLB miss in the
-IF stage (i.e., in clock cycle 3), causing an exception.
-
-Suppose in clock cycle 4, an ALU malfunction exception
-occurs. 
-
-What instructions will appear in the IF, ID, EX, and MEM
-stages, respectively, in clock cycle 5?","IF: the first instruction of the exception handler
-ID: NOP instruction (or bubble)
-EX: NOP instruction (or bubble)
-MEM: NOP instruction (or bubble)"
-83,6,3-4,3,"Consider the execution of the following sequence of four
+82,6,4-d,3,"Consider the execution of the following sequence of four
 instructions on the five-stage pipelined processor:
 sub x10, x11, x12
 add x11, x6, x12
@@ -557,33 +539,33 @@ IF stage (i.e., in clock cycle 3), causing an exception.
 
 What value will be stored in the SEPC (Supervisor Exception
 Program Counter) at the end of clock cycle 4?","the address of add x11, x6, x12"
-84,6,4,3,"Show all your work to determine whether 100101000101 is a correct
+83,6,4,3,"Show all your work to determine whether 100101000101 is a correct
 12-bit Hamming single error correcting code word or not. If it is an incorrect
 code word, you also need to correct it.","Bits 1, 3, 5, 7, 9, 11 should be even parity, but they are not
 
-100101000101¡÷ H=h8h4h2h1 = _ _ _ 1
+100101000101â†’ H=h8h4h2h1 = _ _ _ 1
 
 Bits 2, 3, 6, 7, 10, 11 should be even parity, and they are
 
-100101000101 ¡÷ H=h8h4h2h1 = _ _ 0 1
+100101000101 â†’ H=h8h4h2h1 = _ _ 0 1
 
 Bits 4, 5, 6, 7, 12 should be even parity, but they are not
 
-100101000101 ¡÷ H=h8h4h2h1 = _ 1 0 1
+100101000101 â†’ H=h8h4h2h1 = _ 1 0 1
 
 Bits 8, 9, 10, 11, 12 should be even parity, and they are
 
-100101000101 ¡÷ H=h8h4h2h1 = 0 1 0 1
+100101000101 â†’ H=h8h4h2h1 = 0 1 0 1
 4 + 1 = 5, and bit 5 is in error and can be corrected
 After correction: 100111000101"
-85,6,5-1,3,"Consider a processor with one level of cache. Assume that the cache has
+84,6,5-a,3,"Consider a processor with one level of cache. Assume that the cache has
 the hit time of 2 clock cycles, each main memory access (including all the miss
 handling) takes 100 clock cycles, and the average memory access time (AMAT) per
 instruction is 22 clock cycles. Show all your work when answering the following
 questions.
 
-What is the cache miss rate per instruction?","2 + miss_rate ¡Ñ 100 = 22, miss_rate = 20%"
-86,6,5-2,3,"Consider a processor with one level of cache. Assume that the cache has
+What is the cache miss rate per instruction?","2 + miss_rate Ã— 100 = 22, miss_rate = 20%"
+85,6,5-b,3,"Consider a processor with one level of cache. Assume that the cache has
 the hit time of 2 clock cycles, each main memory access (including all the miss
 handling) takes 100 clock cycles, and the average memory access time (AMAT) per
 instruction is 22 clock cycles. Show all your work when answering the following
@@ -593,9 +575,9 @@ Suppose you want to reduce the AMAT per instruction to 10 clock cycles
 by adding a second-level cache. If the hit time of the second-level cache takes
 15 clock cycles, what is the local miss rate per instruction of the second-level
 cache?","Assume the local miss rate per instruction of the second_level cache is x
-2 + 20% ¡Ñ 15 + 20% ¡Ñ x ¡Ñ 100 = 10
+2 + 20% Ã— 15 + 20% Ã— x Ã— 100 = 10
 x = 25%"
-87,6,6-1,3,"Suppose you are designing a direct-mapped cache of a fixed capacity
+86,6,5-c-1,3,"Suppose you are designing a direct-mapped cache of a fixed capacity
 and considering one of the following two possible configurations: (i) more data
 elements per block but fewer blocks; (ii) fewer data elements per block but more
 blocks.
@@ -606,14 +588,14 @@ disadvantage: Increase the miss penalty
 
 (ii) advantage: Have smaller miss penalty (than configuration (i))
 disadvantage: May increase miss rate (due to spatial locality)."
-88,6,6-2,3,"Suppose you are designing a direct-mapped cache of a fixed capacity
+87,6,5-c-2,3,"Suppose you are designing a direct-mapped cache of a fixed capacity
 and considering one of the following two possible configurations: (i) more data
 elements per block but fewer blocks; (ii) fewer data elements per block but more
 blocks.
 
 Which configuration is a better choice if there is a very high frequency of accessing data
 in consecutive memory addresses? Why?",configuration (i) (1 point) as it can better exploit the spatial locality
-89,6,8-1,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
+88,6,8-a,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
 bits, each page has 4KiB, and the main memory has 32KiB. Each process has a single-
 level page table, and for each page table entry, 5 bits are reserved for the operating system
 functions (valid, reference, dirty, etc.) and the other bits are used to store a physical page
@@ -622,7 +604,7 @@ data structure which is separate from the page table. Show all your work when
 answering the following questions. 
 
 What is the maximum size (in bytes) of virtual memory that a process can have?",Each virtual address has 16 bits so maximum size of virtual memory = 64 KiB
-90,6,8-2,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
+89,6,8-b,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
 bits, each page has 4KiB, and the main memory has 32KiB. Each process has a single-
 level page table, and for each page table entry, 5 bits are reserved for the operating system
 functions (valid, reference, dirty, etc.) and the other bits are used to store a physical page
@@ -631,7 +613,7 @@ data structure which is separate from the page table. Show all your work when
 answering the following questions. 
 
  What is the maximum number of virtual pages that a process can have?",virtual space size / page size = 64KiB / 4KiB = 16 pages
-91,6,8-3,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
+90,6,8-c,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
 bits, each page has 4KiB, and the main memory has 32KiB. Each process has a single-
 level page table, and for each page table entry, 5 bits are reserved for the operating system
 functions (valid, reference, dirty, etc.) and the other bits are used to store a physical page
@@ -641,7 +623,7 @@ answering the following questions.
 
 How many bits are required for each page table entry?","32 KiB / 4 KiB = 8(pages), use 3 bits to record the physical page number
 each page table entry has 5+3 = 8 bits."
-92,6,8-4,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
+91,6,8-d,3,"Consider a byte-addressable virtual memory system. Each virtual address has 16
 bits, each page has 4KiB, and the main memory has 32KiB. Each process has a single-
 level page table, and for each page table entry, 5 bits are reserved for the operating system
 functions (valid, reference, dirty, etc.) and the other bits are used to store a physical page
@@ -650,30 +632,31 @@ data structure which is separate from the page table. Show all your work when
 answering the following questions. 
 
 What is the maximum size (in bytes) that a page table can have?",8 bits x 16 entries = 16 bytes 
-93,7,1-a,4,Explain why the design of kernel mode and the privileged instructions can allow OS to protect a computing system?,"The operation of a computer system is protected by the
+92,7,1-a,4,Explain why the design of kernel mode and the privileged instructions can allow OS to protect a computing system?,"The operation of a computer system is protected by the
 privileged instructions.
 Privileged instruction can only be executed in kernel mode. So if a user want to execute privileged instructions, he must enter the kernel mode by calling
 system calls to execute these instruction on behavior of the user.
 Therefore, the OS can have the control to protect the system."
-94,7,1-b,4,Why we cannot fully protect IO devices by making all the IO instructions as privileged instructions?,"If the memory is not protected, the hacker can still overwrite the IO data and instruction."
-95,7,1-c,4,"As we known, memory access instructions are NOT privileged instructions. What would be the main problem if we make them privileged instructions?","every memory access instruction has to trigger system call. It will be time consuming and
+93,7,1-b,4,Why we cannot fully protect IO devices by making all the IO instructions as privileged instructions?,"If the memory is not protected, the hacker can still overwrite the IO data and instruction."
+94,7,1-c,4,"As we known, memory access instructions are NOT privileged instructions. What would be the main problem if we make them privileged instructions?","every memory access instruction has to trigger system call. It will be time consuming and
 cause performance degradation."
-96,7,1-d,4,"Consider an instruction that is used to disable interrupt, should it be a privileged instruction? Explain why.","Yes, because it can affect other processes."
-97,7,2-a,4,What is POSIX interface?,POSIX is the standard API interface defined by a class of OS.
-98,7,2-b,4,"Why a program only needs to re-compiled, but not re-written when running across different OS with the same POSIX interface?","Because the OS have the same API, the user code only needs to be re-compiled."
-99,7,4-b,4,Why creating a user thread is faster than a kernel thread?,it doesn?™t involve system calls.
-100,7,4-c,4,Does it require context switch when switching the execution among user threads?,"No, context switch only needs when we switch kernel threads."
-101,7,8-a,4,Why LRU can often achieve a pretty good page fault rate in practice?,"Because program has locality, the page recently used is likely to be used again soon.
+95,7,1-d,4,"Consider an instruction that is used to disable interrupt, should it be a privileged instruction? Explain why.","Yes, because it can affect other processes."
+96,7,2-a,4,What is POSIX interface?,POSIX is the standard API interface defined by a class of OS.
+97,7,2-b,4,"Why a program only needs to re-compiled, but not re-written when running across different OS with the same POSIX interface?","Because the OS have the same API, the user code only needs to be re-compiled."
+98,7,4-b,4,Why creating a user thread is faster than a kernel thread?,it doesn?î¨„ involve system calls.
+99,7,4-c,4,Does it require context switch when switching the execution among user threads?,"No, context switch only needs when we switch kernel threads."
+100,7,8-a,4,Why LRU can often achieve a pretty good page fault rate in practice?,"Because program has locality, the page recently used is likely to be used again soon.
 Wrong answer: LRU is an approximation of the optimal algorithm"
-102,7,8-b,4,Explain why stack algorithm can never cause Belady's anomaly.,"Stack algorithm means the page stored with N frame is a subset of the page stored with N+1 frame.
+101,7,8-b,4,Explain why stack algorithm can never cause Belady's anomaly.,"Stack algorithm means the page stored with N frame is a subset of the page stored with N+1 frame.
 Therefore, all the page that are hits with N frame will still be hits with N+1 frame.
 Hence, the number of page faults with N+1 framework will not be more that the result with N frame."
-103,8,7,7,"In Round-robin scheduling, the time quantum should be small with respect to the context-switch time.",FALSE
-104,8,13,7,There may have transition from the READY state to the WAITING state.,FALSE
-105,8,10,7,Linux's Completely Fair Scheduler (CFS) yields constant fairness but a variable switching rate.,TRUE
-106,8,6,7,Process-contention scope involves the decision of which kernel thread to schedule onto which CPU.,FALSE
-107,8,4,7,Cancellation points are associated with asynchronous cancellation.,TRUE
-,,,,,
-,,,,,
-,,,,,
-,,,,,
+102,8,7,7,"True or False?
+In Round-robin scheduling, the time quantum should be small with respect to the context-switch time.",FALSE
+103,8,13,7,"True or False?
+There may have transition from the READY state to the WAITING state.",FALSE
+104,8,10,7,"True or False?
+Linux's Completely Fair Scheduler (CFS) yields constant fairness but a variable switching rate.",TRUE
+105,8,6,7,"True or False?
+Process-contention scope involves the decision of which kernel thread to schedule onto which CPU.",FALSE
+106,8,4,7,"True or False?
+Cancellation points are associated with asynchronous cancellation.",TRUE

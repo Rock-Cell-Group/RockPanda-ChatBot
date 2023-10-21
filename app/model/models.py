@@ -224,7 +224,7 @@ class Questions(Base):
     number_in_file = Column(String(255), default="")
     type = Column(String(255), default="")
     raw_text = Column(LONGTEXT, default="")
-    reference_answer = Column(String(255), default="")
+    reference_answer = Column(LONGTEXT, default="")
 
 
 

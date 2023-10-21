@@ -20,7 +20,7 @@ def parse_question_csv_to_db(input_path: str):
     對應欄位  id, file_id, number_in_file, type, raw_text, reference_answer
     """
     with get_db() as db:
-        with open(input_path, encoding='iso-8859-1') as csv_file:
+        with open(input_path, encoding='UTF-8') as csv_file:
             csv_reader = csv.reader(csv_file)
             next(csv_reader)  # skip header
             for row in csv_reader:
@@ -53,7 +53,7 @@ def parse_file_system_csv_to_db(input_path: str):
     對應欄位  id, user_id, file_name, file_path, file_size, file_extension, file_status, create_at, note, uuid_name, azure_container_name, azure_blob_name, file_purpose, is_file_useful, manager_id, manager_comment, censor_status, ocr_status, ocr_text, knowledge_department, knowledge_professor, knowledge_course, knowledge_year, question_department, question_professor, question_course, question_year, question_semester, question_exam_type, question_exam_question_type
     """
     with get_db() as db:
-        with open(input_path, encoding='iso-8859-1') as csv_file:
+        with open(input_path, encoding='UTF-8') as csv_file:
             csv_reader = csv.reader(csv_file)
             next(csv_reader)  # skip header
             for row in csv_reader:

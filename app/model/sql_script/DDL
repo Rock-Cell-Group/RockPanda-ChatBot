@@ -149,6 +149,6 @@ CREATE TABLE `RAG_QUESTIONS` (
   `number_in_file` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
   `raw_text` longtext DEFAULT NULL,
-  `reference_answer` varchar(255) DEFAULT NULL,
+  `reference_answer` longtext DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
