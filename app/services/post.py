@@ -161,13 +161,20 @@ def answer_to_poster(queue):
             post = db.query(models.Posts).filter(models.Posts.id == message).first()
             print("即將推播以下回應")
             print(post.raw_text)
+            # 找出該問題的origin_msg_id (key)搜尋RAG_POST.id 原始問題的編號
+            # 抓到該原始問題的poster_uid 作為reply_uid
+            origin_question_id = post.origin_msg_id # 原始問題的編號，以此尋找提問者
+            questioner_post = db.query(models.Posts).filter(models.Posts.id == origin_question_id).first()
+            
+            reply_uid = questioner_post.poster_uid
+            print(f"原始發問者id : {reply_uid}")
 
-            # DONE 推播給發問者
+            # 推播給發問者
             with ApiClient(configuration) as api_client:
                 line_bot_api = MessagingApi(api_client)
                 line_bot_api.push_message_with_http_info(
                     PushMessageRequest(
-                        to=post.poster_uid,
+                        to=reply_uid,
                         messages=[
                             TextMessage(
                                 type=post.post_type,
