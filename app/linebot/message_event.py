@@ -1,4 +1,4 @@
-from linebot.v3.webhooks import MessageEvent, TextMessageContent, FileMessageContent
+from linebot.v3.webhooks import MessageEvent, TextMessageContent, FileMessageContent, ImageMessageContent
 from linebot.v3.messaging import ApiClient, MessagingApi, ReplyMessageRequest, TextMessage
 from app.config import settings
 from app.langchain_module.Chat_module import ChatBOT
@@ -12,6 +12,17 @@ from app.model import models
 from app.services import redis
 # lineBot文件處理器
 
+
+@handler.add(MessageEvent, message=ImageMessageContent)
+def handle_file_message(event):
+    with ApiClient(configuration) as api_client:
+        line_bot_api = MessagingApi(api_client)
+        line_bot_api.reply_message_with_http_info(
+            ReplyMessageRequest(
+                reply_token=event.reply_token,
+                messages=[TextMessage(text="感謝您的分享，不過很抱歉目前不知援圖片模式")]
+            )
+        )
 
 @handler.add(MessageEvent, message=FileMessageContent)
 def handle_file_message(event):

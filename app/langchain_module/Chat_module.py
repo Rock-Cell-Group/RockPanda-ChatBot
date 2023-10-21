@@ -113,5 +113,6 @@ class ChatBOT:
         qa = RetrievalQA.from_chain_type(llm=self.llm, chain_type='stuff',
                                          retriever=pineconedb.as_retriever(search_kwargs=search_kwargs))
         result = qa.run(query)
+        result_stripped = result.strip()
 
-        return result
+        return result_stripped
