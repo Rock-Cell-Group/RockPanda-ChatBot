@@ -348,36 +348,46 @@ def handle_list_all_question_postback(event, line_bot_api):
     # 取得所有使用者的所有提問
     all_question_list = get_all_question_list()
     all_question_flex_bubbles_list = []
-
-    for question in all_question_list:
-        title = question.raw_text.split("問題：")[0][3:]
-        content = question.raw_text.split("問題：")[1]
-        all_question_flex_bubbles_list.append(
-            FlexBubble.from_dict(
-                question_forum_templates().get_open_question_bubble_dict(
-                    f'{title}',
-                    f'{content}',
-                    f'提問時間：{question.create_at.strftime("%Y-%m-%d %H:%M:%S")}',
-                    # f'https://line.me/ti/p/~@524repmb',
-                    str(question.id)
-                )
+    if len(all_question_list) == 0:
+        line_bot_api.reply_message(
+            ReplyMessageRequest(
+                reply_token=event.reply_token,
+                messages=[TextMessage(
+                    text='目前還沒有人提問過哦!'
+                )]
             )
         )
 
-    # 將所有提問包裝成flex carousel
-    line_bot_api.reply_message(
-        ReplyMessageRequest(
-            reply_token=event.reply_token,
-            messages=[
-                FlexMessage(
-                    alt_text=f"query record: column",
-                    contents=FlexCarousel(
-                        contents=all_question_flex_bubbles_list
+    else:
+        for question in all_question_list:
+            title = question.raw_text.split("問題：")[0][3:]
+            content = question.raw_text.split("問題：")[1]
+            all_question_flex_bubbles_list.append(
+                FlexBubble.from_dict(
+                    question_forum_templates().get_open_question_bubble_dict(
+                        f'{title}',
+                        f'{content}',
+                        f'提問時間：{question.create_at.strftime("%Y-%m-%d %H:%M:%S")}',
+                        # f'https://line.me/ti/p/~@524repmb',
+                        str(question.id)
                     )
                 )
-            ]
+            )
+
+        # 將所有提問包裝成flex carousel
+        line_bot_api.reply_message(
+            ReplyMessageRequest(
+                reply_token=event.reply_token,
+                messages=[
+                    FlexMessage(
+                        alt_text=f"query record: column",
+                        contents=FlexCarousel(
+                            contents=all_question_flex_bubbles_list
+                        )
+                    )
+                ]
+            )
         )
-    )
 
 
 def handle_response_question_postback(event, line_bot_api):
@@ -407,35 +417,45 @@ def handle_list_my_question_postback(event, line_bot_api):
     # 取得該使用者的所有提問
     my_question_list = get_my_question_list(event.source.user_id)
     my_question_flex_bubbles_list = []
-
-    for question in my_question_list:
-        title = question.raw_text.split("問題：")[0][3:]
-        content = question.raw_text.split("問題：")[1]
-        my_question_flex_bubbles_list.append(
-            FlexBubble.from_dict(
-                question_forum_templates().get_my_question_bubble_dict(
-                    f'{title}',
-                    f'{content}',
-                    f'提問時間：{question.create_at.strftime("%Y-%m-%d %H:%M:%S")}',
-                    str(question.id)
-                )
+    if len(my_question_list) == 0:
+        line_bot_api.reply_message(
+            ReplyMessageRequest(
+                reply_token=event.reply_token,
+                messages=[TextMessage(
+                    text='您目前還沒提問過哦!'
+                )]
             )
         )
-
-    # 將所有提問包裝成flex carousel
-    line_bot_api.reply_message(
-        ReplyMessageRequest(
-            reply_token=event.reply_token,
-            messages=[
-                FlexMessage(
-                    alt_text=f"query record: column",
-                    contents=FlexCarousel(
-                        contents=my_question_flex_bubbles_list
+        
+    else:
+        for question in my_question_list:
+            title = question.raw_text.split("問題：")[0][3:]
+            content = question.raw_text.split("問題：")[1]
+            my_question_flex_bubbles_list.append(
+                FlexBubble.from_dict(
+                    question_forum_templates().get_my_question_bubble_dict(
+                        f'{title}',
+                        f'{content}',
+                        f'提問時間：{question.create_at.strftime("%Y-%m-%d %H:%M:%S")}',
+                        str(question.id)
                     )
                 )
-            ]
+            )
+
+        # 將所有提問包裝成flex carousel
+        line_bot_api.reply_message(
+            ReplyMessageRequest(
+                reply_token=event.reply_token,
+                messages=[
+                    FlexMessage(
+                        alt_text=f"query record: column",
+                        contents=FlexCarousel(
+                            contents=my_question_flex_bubbles_list
+                        )
+                    )
+                ]
+            )
         )
-    )
 
 
 def handle_create_question_postback(event, line_bot_api):
