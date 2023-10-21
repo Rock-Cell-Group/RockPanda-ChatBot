@@ -2,6 +2,7 @@ from app.services import system_file as file_service
 from app.services import user as user_service
 from app.services import questions as questions_service
 from linebot.v3.messaging import FlexBubble
+import copy
 
 class JSON_formated_content:
 
@@ -22,7 +23,8 @@ class JSON_formated_content:
     def get_question_bubble_dict_by_user_id(self, new_question, user_id):
         # 
 
-        bubble = self.question_bubble_template
+        # bubble = self.question_bubble_template
+        bubble = copy.deepcopy(self.question_bubble_template)
         bubble["header"]["contents"][0]["text"] = f'AI生成的類似題目:'
         bubble["body"]["contents"][0]["text"] = f'{new_question}'
         bubble["footer"]["contents"][0]["style"] = 'link'
@@ -41,7 +43,8 @@ class JSON_formated_content:
         number_in_file = questions_service.get_column_value_by_question_id(question_id, "number_in_file")
         question_raw_text = questions_service.get_column_value_by_question_id(question_id, "raw_text")
 
-        bubble = self.question_bubble_template
+        # bubble = self.question_bubble_template
+        bubble = copy.deepcopy(self.question_bubble_template)
         bubble["header"]["contents"][0]["text"] = f'考卷{file_id}的第{number_in_file}題:'
         bubble["body"]["contents"][0]["text"] = f'{question_raw_text}'
         bubble["footer"]["contents"][0]["action"]["data"] = f'action=generate_similar_question@{question_id}' # TODO USER table要存使用者上次生成的內容，這樣才能一直迴圈產生新的類似的，不然都based on固定的question_id可能按下生成類似好幾次都一樣
