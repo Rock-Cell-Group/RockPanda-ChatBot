@@ -146,14 +146,7 @@ def handle_message(event):
 
         elif cmd == "/!快速發問":
             event.message.text = "\n".join(user_message.split("\n")[1:])
-            if len(event.message.text) > 220:
-                line_bot_api.reply_message_with_http_info(
-                    ReplyMessageRequest(
-                        reply_token=event.reply_token,
-                        messages=[TextMessage(text="總字數不得超過200字！")]
-                    )
-                )
-            elif len(event.message.text) < 15:
+            if len(event.message.text) < 15:
                 line_bot_api.reply_message_with_http_info(
                     ReplyMessageRequest(
                         reply_token=event.reply_token,
@@ -172,14 +165,7 @@ def handle_message(event):
 
         elif cmd == "/!我來回答":
             event.message.text = "\n".join(user_message.split("\n")[1:])
-            if len(event.message.text) > 220:
-                line_bot_api.reply_message_with_http_info(
-                    ReplyMessageRequest(
-                        reply_token=event.reply_token,
-                        messages=[TextMessage(text="總字數不得超過200字！")]
-                    )
-                )
-            elif len(event.message.text) < 30:
+            if len(event.message.text) < 20:
                 line_bot_api.reply_message_with_http_info(
                     ReplyMessageRequest(
                         reply_token=event.reply_token,
