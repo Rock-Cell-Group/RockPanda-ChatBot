@@ -94,7 +94,7 @@ def rich_menu_object_json():
                 "action": {
                     "type": "postback",
                     "data": "action=findnew_feature",
-                    "inputOption": "openRichmenu",
+                    "inputOption": "closeRichMenu",
                     #"fillInText": "看看有什麼新功能"
                 }
             },
