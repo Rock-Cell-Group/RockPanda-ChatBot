@@ -237,13 +237,13 @@ def file_fetcher(dialogue):
             file_name = f'{uuid.uuid4()}.{dialogue.message_file_extension}'
             with open(file_path + file_name, "wb") as f:
                 f.write(response.content)
-                result = upload_blob_file(blob_service_client, container_name, file_path, file_name)
-                # 存完本地刪掉
-                import os
-                if os.path.exists(file_path + file_name):
-                    os.remove(file_path + file_name)
-                else:
-                    print("File not found.")
+            result = upload_blob_file(blob_service_client, container_name, file_path, file_name)
+            # 存完本地刪掉
+            import os
+            if os.path.exists(file_path + file_name):
+                os.remove(file_path + file_name)
+            else:
+                print("File not found.")
             return result
     else:
         print(f"Request failed with status code: {response.status_code}")
