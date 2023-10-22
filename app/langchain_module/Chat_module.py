@@ -6,6 +6,7 @@ from langchain.chains import LLMChain
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
+from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.memory import ConversationBufferWindowMemory
 from app.langchain_module.KnowledegeEmbedding_module import KnowledegeEmbedding
 from app.langchain_module.execution_time_decorator import calculate_execution_time
@@ -35,7 +36,7 @@ class ChatBOT:
             i.e., multiple choice, short answer, fill in the gaps, matching, etc.)that assesses the same concept or topic."""
         PROMPT = PromptTemplate(template=prompt_template, input_variables=["Original_question"])
         llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature=0, max_tokens=-1)
-        chain = LLMChain(llm=llm, prompt=PROMPT)
+        chain = LLMChain(llm=llm, prompt=PROMPT, verbose=True)
 
         similar_question = chain.apply([{"Original_question":question}])[0]['text']
         similar_question_stripped = similar_question.strip()
@@ -49,7 +50,7 @@ class ChatBOT:
         問題:{question_tobe_explain}"""
         PROMPT = PromptTemplate(template=prompt_template, input_variables=["question_tobe_explain"])
         llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature=0, max_tokens=-1)
-        chain = LLMChain(llm=llm, prompt=PROMPT)
+        chain = LLMChain(llm=llm, prompt=PROMPT, verbose=True)
 
         question_explanation = chain.apply([{"question_tobe_explain":question}])[0]['text']
         question_explanation_stripped = question_explanation.strip()
@@ -96,20 +97,49 @@ class ChatBOT:
         search_kwargs = {'filter': filter_dict}
         # pineconedb = KnowledegeEmbedding().pineconeInstance
         pineconedb = KnowledegeEmbedding().get_embedding_from_db()
-        '''
-        # Below is memory-version
-        qa = ConversationalRetrievalChain.from_llm(
-            llm=self.llm,
-            retriever=pineconedb.as_retriever(search_kwargs=search_kwargs),
-            chain_type="stuff",
-            verbose=False,
-            memory=self.memory,
-        )
-        chat_history = []
-        result = qa.run({"question": query, "chat_history": chat_history})
-        '''
 
-        # TODO 如果method拆開，是否可以先用fuzzy-wuzzy做字串比對，底對是否在熱門詢問的範圍內，如果是的話就直接回答，不用再跑retrievalQA
+#         # 找最近向量
+#         similar_chunk = pineconedb.similarity_search(query)
+#         # print(similar_chunk)
+#         similar_chunk_1 = similar_chunk[0].page_content
+#         print("!!!!", similar_chunk_1)
+#         '''
+#         # Below is memory-version
+#         qa = ConversationalRetrievalChain.from_llm(
+#             llm=self.llm,
+#             retriever=pineconedb.as_retriever(search_kwargs=search_kwargs),
+#             chain_type="stuff",
+#             verbose=False,
+#             memory=self.memory,
+#         )
+#         chat_history = []
+#         result = qa.run({"question": query, "chat_history": chat_history})
+#         '''
+
+
+#         prompt_template = """Answer the question based on the context passage:
+
+# Context: {similar_chunk}
+
+# Question: {user_message}
+
+# Answer:"""
+
+#         # prompt_template = """請回應用戶的訊息，若參考資料與用戶的訊息無關則不考慮參考資料，直接回覆用戶的訊息。若參考資料可回應用戶的訊息，則考量參考資料回答用戶的訊息
+#         # 用戶的訊息:{user_message}
+#         # 參考資料:{similar_chunk}
+#         # """
+#         PROMPT = PromptTemplate(template=prompt_template, input_variables=["user_message", "similar_chunk"])
+#         llm = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature=0.75, max_tokens=-1)
+#         chain = LLMChain(llm=llm, prompt=PROMPT, verbose=True)
+
+#         result = chain.apply([{"user_message":query, "similar_chunk":similar_chunk}])[0]['text']
+#         result_stripped = result.strip()
+
+
+
+
+        # # TODO 如果method拆開，是否可以先用fuzzy-wuzzy做字串比對，底對是否在熱門詢問的範圍內，如果是的話就直接回答，不用再跑retrievalQA
         qa = RetrievalQA.from_chain_type(llm=self.llm, chain_type='stuff',
                                          retriever=pineconedb.as_retriever(search_kwargs=search_kwargs))
         result = qa.run(query)
