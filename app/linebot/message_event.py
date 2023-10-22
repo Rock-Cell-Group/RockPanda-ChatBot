@@ -158,11 +158,18 @@ def handle_message(event):
         elif cmd == "/!快速發問":
             event.message.text = "\n".join(user_message.split("\n")[1:])
             print(f"**** msg length = {len(event.message.text)}\n")
-            if len(event.message.text) < 15:
+            if len(event.message.text) < 13:
                 line_bot_api.reply_message_with_http_info(
                     ReplyMessageRequest(
                         reply_token=event.reply_token,
                         messages=[TextMessage(text="字數太少囉，請再輸入一次")]
+                    )
+                )
+            elif len(event.message.text) > 20000:
+                line_bot_api.reply_message_with_http_info(
+                    ReplyMessageRequest(
+                        reply_token=event.reply_token,
+                        messages=[TextMessage(text="字數太多囉，請再輸入一次")]
                     )
                 )
             else:
@@ -177,11 +184,18 @@ def handle_message(event):
 
         elif cmd == "/!我來回答":
             event.message.text = "\n".join(user_message.split("\n")[1:])
-            if len(event.message.text) < 15:
+            if len(event.message.text) < 18:
                 line_bot_api.reply_message_with_http_info(
                     ReplyMessageRequest(
                         reply_token=event.reply_token,
                         messages=[TextMessage(text="字數太少囉，請再輸入一次")]
+                    )
+                )
+            elif len(event.message.text) > 20000:
+                line_bot_api.reply_message_with_http_info(
+                    ReplyMessageRequest(
+                        reply_token=event.reply_token,
+                        messages=[TextMessage(text="字數太多囉，請再輸入一次")]
                     )
                 )
             else:
