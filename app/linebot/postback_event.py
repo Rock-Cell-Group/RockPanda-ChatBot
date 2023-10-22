@@ -58,6 +58,11 @@ def handle_postback_data(event, data):
         handle_upload_document_postback(event, line_bot_api)
     elif data == 'action=checkUploadStatus':
         handle_check_upload_status_postback(event, line_bot_api)
+    #C 功能 發現新功能
+    elif data == 'action=findnew_feature':
+        handle_findnew_feature(event, line_bot_api)
+    else:
+        logger.info("Unhandled postback event with data: " + data)
     # D功能 答題
     if data == 'action=question_forum':
         handle_question_forum(event, line_bot_api)
@@ -323,6 +328,18 @@ def handle_check_upload_status_postback(event, line_bot_api):
         ReplyMessageRequest(
             reply_token=event.reply_token,
             messages=[TextMessage(text=status_msg)]
+        )
+    )
+
+def handle_findnew_feature(event, line_bot_api):
+    """
+    # 'action=commit_feedback'
+    # C功能：發現新功能
+    """
+    line_bot_api.reply_message(
+        ReplyMessageRequest(
+            reply_token=event.reply_token,
+            messages=[TextMessage(text="目前還沒有什麼有趣的功能喔，但是我們會持續更新和改善系統，敬請期待！")]
         )
     )
 

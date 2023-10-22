@@ -93,9 +93,9 @@ def rich_menu_object_json():
                 "bounds": {"x": 840, "y": 843, "width": 840, "height": 843},
                 "action": {
                     "type": "postback",
-                    "data": "C",
-                    "inputOption": "openKeyboard",
-                    "fillInText": "看看有什麼新功能"
+                    "data": "action=findnew_feature",
+                    "inputOption": "openRichmenu",
+                    #"fillInText": "看看有什麼新功能"
                 }
             },
             {
