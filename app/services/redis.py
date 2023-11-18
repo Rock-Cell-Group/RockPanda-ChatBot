@@ -1,7 +1,6 @@
 import redis
 import json
 from urllib.parse import urlparse
-from app.app import user_status
 from app.config import settings
 
 # Initialize a Redis client
@@ -12,6 +11,7 @@ redis_client = redis.StrictRedis(
     password=url.password,
 )
 
+user_status = {}
 
 def reset_user_credits():
     # Reset all user credits to 5 at 00:00

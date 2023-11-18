@@ -37,8 +37,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-user_status = {}
-
 
 @app.get('/demo-job')
 def job1():
