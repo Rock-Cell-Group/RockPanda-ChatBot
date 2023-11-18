@@ -20,4 +20,4 @@ EXPOSE 8000
 CMD ["uvicorn", "run:app", "--host", "0.0.0.0", "--port", "8000"]
 
 # docker build -t rag-chatbot .
-# docker run -d -p 8000:8000 -v ${PWD}:/rag-chatbot --name rag-chatbot rag-chatbot
+# docker run -d -p 8000:8000 -v ${PWD}:/RockPanda-Chatbot --name rag-chatbot rag-chatbot
