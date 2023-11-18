@@ -4,6 +4,7 @@ from app.config import settings
 from app.langchain_module.Chat_module import ChatBOT
 from app.linebot import configuration, handler
 from app.logger import logger
+from app.services.redis import use_credit
 from app.utils import POST_QUEUE, ANSWER_QUEUE
 from app.services import user as user_service
 import app.services.system_file as file_service
@@ -234,12 +235,15 @@ def handle_message(event):
             # 如果是正式機，就用openAI回答
             else:
                 # Call the ChatBOT module to get a response
-                response = ChatBOT().retrieval_answer(user_message, "namespace", "manual")
-                '''
-                # Call the ChatBOT module to get a response with metadata filter
-                # metadata filter usage example:
-                response = ChatBOT().retrieval_answer(user_message, "namespace", "about_course") # namespace is metadata_key, about_course is metadata_value
-                '''
+                if use_credit(event.source.user_id):
+                    response = ChatBOT().retrieval_answer(user_message, "namespace", "manual")
+                    '''
+                    # Call the ChatBOT module to get a response with metadata filter
+                    # metadata filter usage example:
+                    response = ChatBOT().retrieval_answer(user_message, "namespace", "about_course") # namespace is metadata_key, about_course is metadata_value
+                    '''
+                else:
+                    response = "您今日的額度已用完，請明日再來使用本服務。"
 
                 # Send the response back to the Line chat
                 line_bot_api.reply_message(

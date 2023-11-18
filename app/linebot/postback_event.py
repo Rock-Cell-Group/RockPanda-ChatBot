@@ -14,7 +14,7 @@ from app.services import system_file as file_service
 from app.services import questions as questions_service
 from app.services.post import get_my_question_list, get_all_question_list
 from app.langchain_module.Chat_module import ChatBOT
-
+from app.services.redis import use_credit
 
 
 # Define a function to handle LineBot postback events
@@ -35,42 +35,49 @@ def handle_postback_data(event, data):
     print("----------\nHERE is DATA:\n", data)
 
     # A功能 生成考題
-    if data == 'action=fetchQuestion':
+    if 'action=fetchQuestion' in data:
         handle_fetch_question_postback(event, line_bot_api)
-    if 'action=select_course' in data:
+    elif 'action=select_course' in data:
         handle_select_course_postback(event, data, line_bot_api)
-    if 'action=select_question_professor' in data:
+    elif 'action=select_question_professor' in data:
         handle_select_professor_postback(event, data, line_bot_api)
-    if 'action=select_question_exam_type' in data:
+    elif 'action=select_question_exam_type' in data:
         handle_select_exam_type_postback(event, data, line_bot_api)
-    if 'action=generate_similar_question' in data:
-        handle_generate_similar_question_postback(event, data, line_bot_api)
+    elif 'action=generate_similar_question' in data:
+        if use_credit(event.source.user_id):
+            handle_generate_similar_question_postback(event, data, line_bot_api)
+        else:
+            handle_no_credit_postback(event, line_bot_api)
     elif 'action=answer_to_db_question' in data:
-        handle_answer_to_db_question_postback(event, data, line_bot_api)
-    if 'action=return_question_text' in data:
+        if use_credit(event.source.user_id):
+            handle_answer_to_db_question_postback(event, data, line_bot_api)
+        else:
+            handle_no_credit_postback(event, line_bot_api)
+    elif 'action=return_question_text' in data:
         handle_return_question_text_postback(event, line_bot_api)
     elif 'action=answer_to_AI_question' in data:
-        handle_answer_to_AI_question_postback(event, line_bot_api)
+        if use_credit(event.source.user_id):
+            handle_answer_to_AI_question_postback(event, line_bot_api)
+        else:
+            handle_no_credit_postback(event, line_bot_api)
     # B功能 貢獻文件
-    if data == 'action=contributeDocDB':
+    elif 'action=contributeDocDB' in data:
         handle_contribute_doc_db_postback(event, line_bot_api)
-    elif data == 'action=uploadDocument':
+    elif 'action=uploadDocument' in data:
         handle_upload_document_postback(event, line_bot_api)
-    elif data == 'action=checkUploadStatus':
+    elif 'action=checkUploadStatus' in data:
         handle_check_upload_status_postback(event, line_bot_api)
-    #C 功能 發現新功能
-    elif data == 'action=findnew_feature':
+    # C 功能 發現新功能
+    elif 'action=findnew_feature' in data:
         handle_findnew_feature(event, line_bot_api)
-    else:
-        logger.info("Unhandled postback event with data: " + data)
     # D功能 答題
-    if data == 'action=question_forum':
+    elif 'action=question_forum' in data:
         handle_question_forum(event, line_bot_api)
-    elif data == 'action=list_all_question':
+    elif 'action=list_all_question' in data:
         handle_list_all_question_postback(event, line_bot_api)
-    elif data == 'action=list_my_question':
+    elif 'action=list_my_question' in data:
         handle_list_my_question_postback(event, line_bot_api)
-    elif data == 'action=create_question':
+    elif 'action=create_question' in data:
         handle_create_question_postback(event, line_bot_api)
     elif 'action=delete_question&question_id=' in data:
         handle_delete_question_postback(event, line_bot_api)
@@ -79,10 +86,10 @@ def handle_postback_data(event, data):
     elif 'action=response_question' in data:
         handle_response_question_postback(event, line_bot_api)
     # E功能 投稿一則快訊
-    elif data == 'action=commit_post':
+    elif 'action=commit_post' in data:
         handle_commit_post_postback(event, line_bot_api)
     # F功能 填寫反饋
-    elif data == 'action=commit_feedback':
+    elif 'action=commit_feedback' in data:
         handle_commit_feedback_postback(event, line_bot_api)
     else:
         logger.info("Unhandled postback event with data: " + data)
@@ -94,6 +101,19 @@ def get_line_bot_api():
 
 
 # Define functions for each action
+
+def handle_no_credit_postback(event, line_bot_api):
+    """
+    # 'action=no_credit'
+    # 如果使用者已用完今日額度，則回傳此訊息
+    """
+    line_bot_api.reply_message(
+        ReplyMessageRequest(
+            reply_token=event.reply_token,
+            messages=[TextMessage(text="您今日的額度已用完，請明日再來使用本服務。")]
+        )
+    )
+
 
 def handle_fetch_question_postback(event, line_bot_api):
     """

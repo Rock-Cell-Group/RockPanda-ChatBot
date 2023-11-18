@@ -13,6 +13,33 @@ redis_client = redis.StrictRedis(
 )
 
 
+def reset_user_credits():
+    # Reset all user credits to 5 at 00:00
+    users = redis_client.keys('user:*')
+    for user in users:
+        redis_client.set(user, 5)
+
+
+def get_user_credit(user_id):
+    # Get user credit or initialize to 5 if not exists
+    credit = redis_client.get(f'user:{user_id}')
+    if credit is None:
+        redis_client.set(f'user:{user_id}', 5)
+        credit = 5
+    return int(credit)
+
+
+def use_credit(user_id):
+    # Use 1 credit and return True if successful, False if not enough credits
+    user_key = f'user:{user_id}'
+    current_credit = redis_client.get(user_key)
+    if current_credit is not None and int(current_credit) > 0:
+        redis_client.decr(user_key)
+        return True
+    else:
+        return False
+
+
 # Save the user_state in Redis with a TTL of 1 day (86400 seconds)
 def save_user_state(user_id, state):
     if settings.CONFIG_TYPE == "BaseConfig":  # 只有在local才使用全域變數存
