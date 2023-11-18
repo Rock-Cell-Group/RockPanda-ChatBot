@@ -13,6 +13,7 @@ redis_client = redis.StrictRedis(
 
 user_status = {}
 
+
 def reset_user_credits():
     # Reset all user credits to 5 at 00:00
     users = redis_client.keys('user:*')
@@ -31,10 +32,9 @@ def get_user_credit(user_id):
 
 def use_credit(user_id):
     # Use 1 credit and return True if successful, False if not enough credits
-    user_key = f'user:{user_id}'
-    current_credit = redis_client.get(user_key)
+    current_credit = get_user_credit(user_id)
     if current_credit is not None and int(current_credit) > 0:
-        redis_client.decr(user_key)
+        redis_client.decr(f'user:{user_id}')
         return True
     else:
         return False
