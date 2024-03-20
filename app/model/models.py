@@ -10,7 +10,7 @@ Base = declarative_base()
 
 class Users(Base):
     __tablename__ = 'RAG_USER'
-
+    __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(String(255), unique=True, default='')  # event.source.user_id
     openai_api_key = Column(String(255), default='')
@@ -72,7 +72,7 @@ class Users(Base):
 
 class Posts(Base):
     __tablename__ = 'RAG_POST'
-
+    __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     raw_text = Column(LONGTEXT, default="")  # event.message.text
     post_type = Column(String(255), default='Unknown')  # event.message.type
@@ -110,7 +110,7 @@ class Posts(Base):
 
 class Dialogue(Base):
     __tablename__ = 'RAG_DIALOGUE'
-
+    __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     parent_node = Column(String(255), default="")
     create_at = Column(DateTime, default=func.now())
@@ -176,7 +176,7 @@ class FileSystem(Base):
         return self.__dict__[field]
 
     __tablename__ = 'RAG_FILE_SYSTEM'
-
+    __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(String(255), default="")
     file_name = Column(String(255), default="")
@@ -218,7 +218,7 @@ class FileSystem(Base):
 
 class Questions(Base):
     __tablename__ = 'RAG_QUESTIONS'
-
+    __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     file_id = Column(String(255), default="")
     number_in_file = Column(String(255), default="")
