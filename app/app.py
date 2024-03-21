@@ -64,7 +64,7 @@ async def startup_event():
 
         # 塞入初始資料(題目們)
         # Explicitly declare the SQL query as a text object
-        query = text("SELECT count(*) FROM all4one.RAG_FILE_SYSTEM")
+        query = text("SELECT count(*) FROM all4one.rag_file_system")
         db_file_number = db.execute(query).scalar()
         if db_file_number == 0:  # 絕對路徑寫法比較安全，但是container內的folder名稱必須叫RAG_ChatBot，不能換名字
             print('DB is empty, start to insert initial data')

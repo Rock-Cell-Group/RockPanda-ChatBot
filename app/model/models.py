@@ -9,7 +9,7 @@ Base = declarative_base()
 
 
 class Users(Base):
-    __tablename__ = 'RAG_USER'
+    __tablename__ = 'rag_user'
     __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(String(255), unique=True, default='')  # event.source.user_id
@@ -71,7 +71,7 @@ class Users(Base):
 
 
 class Posts(Base):
-    __tablename__ = 'RAG_POST'
+    __tablename__ = 'rag_post'
     __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     raw_text = Column(LONGTEXT, default="")  # event.message.text
@@ -109,7 +109,7 @@ class Posts(Base):
 
 
 class Dialogue(Base):
-    __tablename__ = 'RAG_DIALOGUE'
+    __tablename__ = 'rag_dialogue'
     __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     parent_node = Column(String(255), default="")
@@ -175,7 +175,7 @@ class FileSystem(Base):
     def __getitem__(self, field):
         return self.__dict__[field]
 
-    __tablename__ = 'RAG_FILE_SYSTEM'
+    __tablename__ = 'rag_file_system'
     __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(String(255), default="")
@@ -217,7 +217,7 @@ class FileSystem(Base):
     question_exam_question_type = Column(Integer, default=0)  # 題型 0:未分類 1:選擇題 2:填充題 3:問答題 4:簡答題 5:計算題 6:繪圖題 7: 是非題 8:其他
 
 class Questions(Base):
-    __tablename__ = 'RAG_QUESTIONS'
+    __tablename__ = 'rag_questions'
     __table_args__ = {'schema': 'all4one'}  # Specify the schema name here
     id = Column(Integer, primary_key=True, autoincrement=True)
     file_id = Column(String(255), default="")
